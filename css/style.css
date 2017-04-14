@@ -1320,7 +1320,7 @@ footer.main-footer .share-box li:hover a > span.icon.icon--vk-white,
 footer.main-footer .share-box li:focus a > span.icon.icon--vk-white,
 .icon.icon--vk-white
 {
-    background: url('../../img/svg/sprite-69d7736c.svg') no-repeat;
+    background: url('../../img/svg/sprite-4fdf8976.svg') no-repeat;
 }
 
 .icon.icon--catalog-black
@@ -2089,11 +2089,6 @@ textarea
             box-shadow: none;
 }
 
-textarea
-{
-    resize: vertical;
-}
-
 .form-control
 {
     font-size: 14px;
@@ -2162,6 +2157,31 @@ fieldset[disabled] .form-control
     cursor: not-allowed;
 }
 
+.form-control.range
+{
+    display: inline-block;
+    float: left;
+
+    width: 50%;
+}
+
+.form-control.range--left
+{
+    -webkit-border-top-right-radius: 0;
+            border-top-right-radius: 0;
+    -webkit-border-bottom-right-radius: 0;
+            border-bottom-right-radius: 0;
+}
+
+.form-control.range--right
+{
+    border-left-color: transparent;
+    -webkit-border-top-left-radius: 0;
+            border-top-left-radius: 0;
+    -webkit-border-bottom-left-radius: 0;
+            border-bottom-left-radius: 0;
+}
+
 textarea.form-control
 {
     height: auto;
@@ -2214,12 +2234,19 @@ input[type='search']
 
 .form-group
 {
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 }
 
 .form-group label.light
 {
     color: #38b0be;
+}
+
+input.clip
+{
+    background: transparent url('../img/clip.svg') 100% 9px no-repeat;
+    -webkit-background-size: 30px 15px;
+            background-size: 30px 15px;
 }
 
 input[type='checkbox'],
@@ -2235,16 +2262,18 @@ input[type='radio'] + label
 
     position: relative;
 
+    margin: 0;
     padding-left: 30px;
 
     cursor: pointer;
+    text-transform: none;
 }
 
 input[type='checkbox'] + label::before,
 input[type='radio'] + label::before
 {
     position: absolute;
-    top: -2px;
+    top: 0;
     left: 0;
 
     -webkit-box-sizing: border-box;
@@ -2254,26 +2283,56 @@ input[type='radio'] + label::before
 
     content: '';
 
-    border: 1px solid #dadada;
+    border: 1px solid #264c5c;
     background: #fff;
 }
 
-input[type='checkbox']:checked + label::before,
-input[type='radio']:checked + label::before
+input[type='checkbox'] + label::after,
+input[type='radio'] + label::after
 {
     position: absolute;
-    top: -2px;
+    z-index: 0;
+    top: -1px;
     left: 0;
 
     width: 17px;
     height: 17px;
+    margin-top: 1px;
 
     content: '';
+    -webkit-transition: .2s;
+            transition: .2s;
 
-    border: 1px solid #dadada;
-    background: #fff url('/img/icons-sprite-small.png') -219px -5px no-repeat;
-    -webkit-background-size: 345px 30px;
-            background-size: 345px 30px;
+    border-top: transparent;
+    border-right: 1px solid #264c5c;
+    border-bottom: 1px solid #264c5c;
+    border-left: transparent;
+
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+}
+
+input[type='checkbox']:checked + label::after,
+input[type='radio']:checked + label::after
+{
+    top: -2px;
+
+    width: 7px;
+    height: 15px;
+
+    -webkit-transform: rotate(40deg);
+        -ms-transform: rotate(40deg);
+            transform: rotate(40deg);
+    -webkit-transform-origin: 100% 100%;
+        -ms-transform-origin: 100% 100%;
+            transform-origin: 100% 100%;
+
+    border-top: 2px solid transparent;
+    border-right: 2px solid #264c5c;
+    border-bottom: 2px solid #264c5c;
+    border-left: 2px solid transparent;
+    -webkit-border-radius: 1px;
+            border-radius: 1px;
 }
 
 /*
@@ -2700,20 +2759,17 @@ select[multiple].input-md
     color: #f1f5f8;
 }
 
-/*
-// Help text
-//
-// Apply to any element you wish to create light text for placement immediately
-// below a form control. Use for general help, formatting, or instructional text.
+.help-block
+{
+    display: block;
 
-.help-block {
-  display: block; // account for any element using help-block
-  margin-top: 5px;
-  margin-bottom: 10px;
-  color: lighten($text-color, 25%); // lighten the text some for contrast
+    margin-top: 5px;
+    margin-bottom: 10px;
+
+    color: #4c96b5;
 }
 
-
+/*
 // Inline forms
 //
 // Make forms appear inline(-block) by adding the `.form-inline` class. Inline
@@ -3665,6 +3721,11 @@ fieldset[disabled] .btn--geo-link.focus
 {
     color: transparent;
     background-color: #264c5c;
+}
+
+.btn--geo-link-u
+{
+    text-decoration: underline;
 }
 
 .btn--geo-brand-20
@@ -5916,6 +5977,11 @@ fieldset[disabled] .p-main .select-header_btn-right.focus
 
     -webkit-box-shadow: 2px 2px 3px 0 rgba(0, 0, 0, .1), 2px 2px 4px -4px rgba(0, 0, 0, .4);
             box-shadow: 2px 2px 3px 0 rgba(0, 0, 0, .1), 2px 2px 4px -4px rgba(0, 0, 0, .4);
+}
+
+.p-account .body-block form.form .btn.btn--geo-link
+{
+    margin-top: 35px;
 }
 
 @media screen and (-webkit-min-device-pixel-ratio: 0)
