@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Создание нового предложения</title>
+    <title>Редактирование личных данных</title>
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans&subset=cyrillic-ext">
     <!--[if lt IE 9]>
@@ -34,9 +34,11 @@
                                     </div>
                                     <div class="nav nav--messages hidden-xs hidden-sm">
                                         <button type="button" class="btn btn--messages nav-btn"></button>
+                                        <span class="badge"></span>
                                     </div>
                                     <div class="nav nav--notices hidden-xs hidden-sm">
                                         <button type="button" class="btn btn--notices nav-btn"></button>
+                                        <span class="badge"></span>
                                     </div>
                                 </div>
                                 <div class="hide js-menu-active">
@@ -209,95 +211,203 @@
                             </div>
                         </div>
                         <div class="col-xs-9 col-md-9">
-                            <div class="panel panel--account">
-                                <h2 class="page-account-name">Создание нового предложения</h2>
-                                <p class="account-description">Услуги и товары в Вашем регионе</p>
-                                <hr>
-                                <form class="form" id="form-new-ads">
-                                    <div class="row">
-                                        <div class="col-sm-4">
-                                            <div class="form-group">
-                                                <label for="">Вид услуг / товаров</label>
-                                                <select class="form-control" name="">
-                                                    <option>Спецтехника и оборудование</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-4">
-                                            <div class="form-group">
-                                                <label for="">Категория</label>
-                                                <select class="form-control" name="">
-                                                    <option>Спецтехника</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-4">
-                                            <div class="form-group">
-                                                <label for="">Где</label>
-                                                <select class="form-control" name="">
-                                                    <option>Москва и МО</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-sm-12">
-                                            <div class="form-group">
-                                                <label for="">Название</label>
-                                                <input type="text" class="form-control" placeholder="Название">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-sm-12">
-                                            <div class="form-group">
-                                                <label for="">Описание</label>
-                                                <textarea class="form-control" rows="6" placeholder="Описание"></textarea>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-sm-3">
-                                            <div class="form-group">
-                                                <label for="">Стоимость (Р)</label>
-                                                <input type="text" class="form-control range range--left" placeholder="0">
-                                                <input type="text" class="form-control range range--right" placeholder="10 000">
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-3">
-                                            <div class="form-group">
-                                                <label for="">Фотографии</label>
-                                                <input type="text" class="form-control clip" placeholder="Фотографии" readonly>
-                                                <input type="file" class="hide" accept="image/*" multiple>
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-3">
-                                            <div class="form-group">
-                                                <label for="">Документы</label>
-                                                <input type="text" class="form-control clip" placeholder="Документы" readonly>
-                                                <input type="file" class="hide">
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-3">
-                                            <div class="form-group">
-                                                <button class="btn btn--geo-brand-20 btn--geo-link btn--geo-link-u btn--block">Указать на карте</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-sm-6">
-                                            <div class="form-group">
-                                                <div class="checkbox">
-                                                    <input type="checkbox" id="cost-options">
-                                                    <label for="cost-options">Рассмотрю варианты стоимости</label>
+                            <div class="messages">
+                                <div class="messages-nav panel">
+                                    <ul class="list-dialog nice-scroll">
+                                        <li class="list-dialog_item">
+                                            <a href="#!" class="dialog-block">
+                                                <div class="avatar-block">
+                                                    <img src="/img/users/maks.jpg" class="user-avatar">
                                                 </div>
+                                                <div class="desc-block">
+                                                    <span>Павел Григорьян</span>
+                                                </div>
+                                            </a>
+                                            <span class="control" title="Удалить переписку">
+                                                <span class="close"></span>
+                                            </span>
+                                        </li>
+                                        <li class="list-dialog_item active">
+                                            <a href="#!" class="dialog-block">
+                                                <div class="avatar-block">
+                                                    <img src="/img/users/maks.jpg" class="user-avatar">
+                                                </div>
+                                                <div class="desc-block">
+                                                    <span>ООО «ГазЛогистик Сервис»</span>
+                                                </div>
+                                            </a>
+                                            <span class="control" title="Удалить переписку">
+                                                <span class="close"></span>
+                                            </span>
+                                        </li>
+                                        <li class="list-dialog_item">
+                                            <a href="#!" class="dialog-block">
+                                                <div class="avatar-block">
+                                                    <img src="/img/users/maks.jpg" class="user-avatar">
+                                                </div>
+                                                <div class="desc-block">
+                                                    <span>Сергей Верещагин</span>
+                                                </div>
+                                            </a>
+                                            <span class="control" title="Удалить переписку">
+                                                <span class="close"></span>
+                                            </span>
+                                        </li>
+                                        <li class="list-dialog_item">
+                                            <a href="#!" class="dialog-block">
+                                                <div class="avatar-block">
+                                                    <img src="/img/users/maks.jpg" class="user-avatar">
+                                                </div>
+                                                <div class="desc-block">
+                                                    <span>Жанна Анатольевна</span>
+                                                </div>
+                                            </a>
+                                            <span class="control" title="Удалить переписку">
+                                                <span class="close"></span>
+                                            </span>
+                                        </li>
+                                        <li class="list-dialog_item">
+                                            <a href="#!" class="dialog-block">
+                                                <div class="avatar-block">
+                                                    <img src="/img/users/maks.jpg" class="user-avatar">
+                                                </div>
+                                                <div class="desc-block">
+                                                    <span>АО «Стройтранс нефтегаз»</span>
+                                                </div>
+                                            </a>
+                                            <span class="control" title="Удалить переписку">
+                                                <span class="close"></span>
+                                            </span>
+                                        </li>
+                                        <li class="list-dialog_item">
+                                            <a href="#!" class="dialog-block">
+                                                <div class="avatar-block">
+                                                    <img src="/img/users/maks.jpg" class="user-avatar">
+                                                </div>
+                                                <div class="desc-block">
+                                                    <span>Василиса Вырыпаева</span>
+                                                </div>
+                                            </a>
+                                            <span class="control" title="Удалить переписку">
+                                                <span class="close"></span>
+                                            </span>
+                                        </li>
+                                        <li class="list-dialog_item">
+                                            <a href="#!" class="dialog-block">
+                                                <div class="avatar-block">
+                                                    <img src="/img/users/maks.jpg" class="user-avatar">
+                                                </div>
+                                                <div class="desc-block">
+                                                    <span>Сергей Ионин</span>
+                                                </div>
+                                            </a>
+                                            <span class="control" title="Удалить переписку">
+                                                <span class="close"></span>
+                                            </span>
+                                        </li>
+                                        <li class="list-dialog_item">
+                                            <a href="#!" class="dialog-block">
+                                                <div class="avatar-block">
+                                                    <img src="/img/users/maks.jpg" class="user-avatar">
+                                                </div>
+                                                <div class="desc-block">
+                                                    <span>Сергей Верещагин</span>
+                                                </div>
+                                            </a>
+                                            <span class="control" title="Удалить переписку">
+                                                <span class="close"></span>
+                                            </span>
+                                        </li>
+                                        <li class="list-dialog_item">
+                                            <a href="#!" class="dialog-block">
+                                                <div class="avatar-block">
+                                                    <img src="/img/users/maks.jpg" class="user-avatar">
+                                                </div>
+                                                <div class="desc-block">
+                                                    <span>Сергей Верещагин</span>
+                                                </div>
+                                            </a>
+                                            <span class="control" title="Удалить переписку">
+                                                <span class="close"></span>
+                                            </span>
+                                        </li>
+                                        <li class="list-dialog_item">
+                                            <a href="#!" class="dialog-block">
+                                                <div class="avatar-block">
+                                                    <img src="/img/users/maks.jpg" class="user-avatar">
+                                                </div>
+                                                <div class="desc-block">
+                                                    <span>Сергей Верещагин</span>
+                                                </div>
+                                            </a>
+                                            <span class="control" title="Удалить переписку">
+                                                <span class="close"></span>
+                                            </span>
+                                        </li>
+                                        <li class="list-dialog_item">
+                                            <a href="#!" class="dialog-block">
+                                                <div class="avatar-block">
+                                                    <img src="/img/users/maks.jpg" class="user-avatar">
+                                                </div>
+                                                <div class="desc-block">
+                                                    <span>Сергей Верещагин</span>
+                                                </div>
+                                            </a>
+                                            <span class="control" title="Удалить переписку">
+                                                <span class="close"></span>
+                                            </span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="messages-body panel">
+                                    <div class="messages-body_head">
+                                        <div class="dialog-block">
+                                            <div class="avatar-block">
+                                                <img src="/img/users/maks.jpg" class="user-avatar">
+                                            </div>
+                                            <div class="desc-block">
+                                                <span>ООО «ГазЛогистикСервис»</span>
                                             </div>
                                         </div>
-                                        <div class="col-sm-6">
-                                            <div class="text-right">
-                                                <button class="btn btn--danger">Создать предложение</button>
+                                        <p class="activity">Был в сети 21.05.2017 в 13:33</p>
+                                    </div>
+                                    <ul class="messages-body_content nice-scroll js-nice-scroll--bottom">
+                                        <li class="message_item message_item--from">
+                                            <div class="bubble">
+                                                <p>Хотела гереговорить по поводу Вашего последнего предложения об оказании услуг по охране складских объектов.<br>Какова стоимость и сколько людей трудятся у Вас в штате?</p>
+                                                <p class="activity">21.05.2017 в 13:33</p>
                                             </div>
-                                        </div>
+                                        </li>
+                                        <li class="message_item message_item--to">
+                                            <div class="bubble">
+                                                <p>Лучший опыт по организации скалдской логистики я приобрел именно на Маркетет складской логистики</p>
+                                                <p class="activity">22.05.2017 в 12:08</p>
+                                                <p class="status">Прочитано</p>
+                                            </div>
+                                        </li>
+                                        <li class="message_item message_item--to">
+                                            <div class="bubble">
+                                                <p>Вы прочитали последнее сообщение?</p>
+                                                <p class="activity">22.05.2017 в 12:10</p>
+                                                <p class="status">Доставлено</p>
+                                            </div>
+                                        </li>
+                                        <li class="message_item message_item--from">
+                                            <div class="bubble">
+                                                <p>Хотела гереговорить по поводу Вашего последнего предложения об оказании услуг по охране складских объектов.<br>Какова стоимость и сколько людей трудятся у Вас в штате?</p>
+                                                <p class="activity">21.05.2017 в 13:33</p>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="panel messages-form">
+                                <form class="form">
+                                    <div class="col-xs-10">
+                                        <input type="text" class="form-control" placeholder="Начните писать сообщение...">
+                                    </div>
+                                    <div class="col-xs-2">
+                                        <button type="submit" class="btn btn--danger btn--block">Отправить</button>
                                     </div>
                                 </form>
                             </div>

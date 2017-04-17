@@ -661,6 +661,8 @@ hr.white
     height: .75em;
     margin: 0;
     padding: 0;
+
+    cursor: pointer;
 }
 
 .close:before,
@@ -1895,6 +1897,8 @@ small,
 
 .text-uppercase,
 .form-group label,
+.form-group .p-account .body-block form.form .label-pass-from-sms,
+.p-account .body-block form.form .form-group .label-pass-from-sms,
 .list-out_head > div,
 .p-main .box-about h4.title,
 .p-main .box-end h4.title,
@@ -1987,7 +1991,8 @@ ol ol
     padding-left: 5px;
 }
 
-label
+label,
+.p-account .body-block form.form .label-pass-from-sms
 {
     font-weight: bold;
 
@@ -1995,6 +2000,8 @@ label
 
     max-width: 100%;
     margin-bottom: 15px;
+
+    color: #38b0be;
 }
 
 input[type='search']
@@ -2237,14 +2244,18 @@ input[type='search']
     margin-bottom: 20px;
 }
 
-.form-group label.light
+.form-group label.dark,
+.form-group .p-account .body-block form.form .dark.label-pass-from-sms,
+.p-account .body-block form.form .form-group .dark.label-pass-from-sms
 {
-    color: #38b0be;
+    color: #336;
 }
 
 input.clip
 {
-    background: transparent url('../img/clip.svg') 100% 9px no-repeat;
+    cursor: pointer;
+
+    background: transparent url('/img/clip.svg') 100% 9px no-repeat;
     -webkit-background-size: 30px 15px;
             background-size: 30px 15px;
 }
@@ -2256,7 +2267,10 @@ input[type='radio']
 }
 
 input[type='checkbox'] + label,
-input[type='radio'] + label
+.p-account .body-block form.form input[type='checkbox'] + .label-pass-from-sms,
+input[type='radio'] + label,
+.p-account .body-block form.form
+input[type='radio'] + .label-pass-from-sms
 {
     font-size: 12px;
 
@@ -2270,7 +2284,10 @@ input[type='radio'] + label
 }
 
 input[type='checkbox'] + label::before,
-input[type='radio'] + label::before
+.p-account .body-block form.form input[type='checkbox'] + .label-pass-from-sms::before,
+input[type='radio'] + label::before,
+.p-account .body-block form.form
+  input[type='radio'] + .label-pass-from-sms::before
 {
     position: absolute;
     top: 0;
@@ -2288,7 +2305,10 @@ input[type='radio'] + label::before
 }
 
 input[type='checkbox'] + label::after,
-input[type='radio'] + label::after
+.p-account .body-block form.form input[type='checkbox'] + .label-pass-from-sms::after,
+input[type='radio'] + label::after,
+.p-account .body-block form.form
+  input[type='radio'] + .label-pass-from-sms::after
 {
     position: absolute;
     z-index: 0;
@@ -2313,7 +2333,10 @@ input[type='radio'] + label::after
 }
 
 input[type='checkbox']:checked + label::after,
-input[type='radio']:checked + label::after
+.p-account .body-block form.form input[type='checkbox']:checked + .label-pass-from-sms::after,
+input[type='radio']:checked + label::after,
+.p-account .body-block form.form
+input[type='radio']:checked + .label-pass-from-sms::after
 {
     top: -2px;
 
@@ -2606,9 +2629,21 @@ select[multiple].input-md
 .has-success .radio-inline,
 .has-success .checkbox-inline,
 .has-success.radio label,
+.has-success.radio .p-account .body-block form.form .label-pass-from-sms,
+.p-account .body-block form.form
+.has-success.radio .label-pass-from-sms,
 .has-success.checkbox label,
+.has-success.checkbox .p-account .body-block form.form .label-pass-from-sms,
+.p-account .body-block form.form
+.has-success.checkbox .label-pass-from-sms,
 .has-success.radio-inline label,
-.has-success.checkbox-inline label
+.has-success.radio-inline .p-account .body-block form.form .label-pass-from-sms,
+.p-account .body-block form.form
+.has-success.radio-inline .label-pass-from-sms,
+.has-success.checkbox-inline label,
+.has-success.checkbox-inline .p-account .body-block form.form .label-pass-from-sms,
+.p-account .body-block form.form
+.has-success.checkbox-inline .label-pass-from-sms
 {
     color: #38b0be;
 }
@@ -2646,9 +2681,21 @@ select[multiple].input-md
 .has-warning .radio-inline,
 .has-warning .checkbox-inline,
 .has-warning.radio label,
+.has-warning.radio .p-account .body-block form.form .label-pass-from-sms,
+.p-account .body-block form.form
+.has-warning.radio .label-pass-from-sms,
 .has-warning.checkbox label,
+.has-warning.checkbox .p-account .body-block form.form .label-pass-from-sms,
+.p-account .body-block form.form
+.has-warning.checkbox .label-pass-from-sms,
 .has-warning.radio-inline label,
-.has-warning.checkbox-inline label
+.has-warning.radio-inline .p-account .body-block form.form .label-pass-from-sms,
+.p-account .body-block form.form
+.has-warning.radio-inline .label-pass-from-sms,
+.has-warning.checkbox-inline label,
+.has-warning.checkbox-inline .p-account .body-block form.form .label-pass-from-sms,
+.p-account .body-block form.form
+.has-warning.checkbox-inline .label-pass-from-sms
 {
     color: #8a6d3b;
 }
@@ -2686,9 +2733,21 @@ select[multiple].input-md
 .has-error .radio-inline,
 .has-error .checkbox-inline,
 .has-error.radio label,
+.has-error.radio .p-account .body-block form.form .label-pass-from-sms,
+.p-account .body-block form.form
+.has-error.radio .label-pass-from-sms,
 .has-error.checkbox label,
+.has-error.checkbox .p-account .body-block form.form .label-pass-from-sms,
+.p-account .body-block form.form
+.has-error.checkbox .label-pass-from-sms,
 .has-error.radio-inline label,
-.has-error.checkbox-inline label
+.has-error.radio-inline .p-account .body-block form.form .label-pass-from-sms,
+.p-account .body-block form.form
+.has-error.radio-inline .label-pass-from-sms,
+.has-error.checkbox-inline label,
+.has-error.checkbox-inline .p-account .body-block form.form .label-pass-from-sms,
+.p-account .body-block form.form
+.has-error.checkbox-inline .label-pass-from-sms
 {
     color: #e84c3d;
 }
@@ -2726,9 +2785,21 @@ select[multiple].input-md
 .input-search-white .radio-inline,
 .input-search-white .checkbox-inline,
 .input-search-white.radio label,
+.input-search-white.radio .p-account .body-block form.form .label-pass-from-sms,
+.p-account .body-block form.form
+.input-search-white.radio .label-pass-from-sms,
 .input-search-white.checkbox label,
+.input-search-white.checkbox .p-account .body-block form.form .label-pass-from-sms,
+.p-account .body-block form.form
+.input-search-white.checkbox .label-pass-from-sms,
 .input-search-white.radio-inline label,
-.input-search-white.checkbox-inline label
+.input-search-white.radio-inline .p-account .body-block form.form .label-pass-from-sms,
+.p-account .body-block form.form
+.input-search-white.radio-inline .label-pass-from-sms,
+.input-search-white.checkbox-inline label,
+.input-search-white.checkbox-inline .p-account .body-block form.form .label-pass-from-sms,
+.p-account .body-block form.form
+.input-search-white.checkbox-inline .label-pass-from-sms
 {
     color: #f1f5f8;
 }
@@ -4624,6 +4695,32 @@ table th[class*='col-']
 }
 */
 
+.badge
+{
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 1;
+
+    display: inline-block;
+
+    min-width: 10px;
+    padding: 4px;
+
+    text-align: center;
+    vertical-align: baseline;
+    white-space: nowrap;
+
+    color: #fff;
+    -webkit-border-radius: 50%;
+            border-radius: 50%;
+    background-color: #e84c3d;
+}
+
+.badge:empty
+{
+    display: none;
+}
+
 /*=== компоненты ===*/
 
 .main-menu
@@ -4805,6 +4902,8 @@ table th[class*='col-']
 .main-menu__wrap .nav.nav--notices,
 .main-menu__wrap .nav.nav--messages
 {
+    position: relative;
+
     float: right;
 
     margin-left: 0;
@@ -4823,6 +4922,17 @@ table th[class*='col-']
 {
     top: 16px;
     left: 16px;
+}
+
+.main-menu__wrap .nav.nav--menu .badge,
+.main-menu__wrap .nav.nav--notices .badge,
+.main-menu__wrap .nav.nav--messages .badge
+{
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    margin: 10px;
 }
 
 .main-menu__wrap .nav.nav--menu
@@ -5385,12 +5495,323 @@ footer.main-footer .copyright
     width: 155px;
 }
 
+.messages
+{
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display:         flex;
+
+    width: 100%;
+    height: 610px;
+
+    -webkit-flex-flow: row nowrap;
+        -ms-flex-flow: row nowrap;
+            flex-flow: row nowrap;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+            justify-content: center;
+}
+
+.messages-nav,
+.messages-body
+{
+    height: 100%;
+}
+
+.messages-nav .dialog-block,
+.messages-body .dialog-block
+{
+    position: relative;
+
+    display: block;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display:         flex;
+
+    width: 100%;
+    height: 100%;
+
+    -webkit-flex-flow: row nowrap;
+        -ms-flex-flow: row nowrap;
+            flex-flow: row nowrap;
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+            justify-content: flex-start;
+}
+
+.messages-nav .dialog-block .avatar-block,
+.messages-body .dialog-block .avatar-block
+{
+    display: block;
+
+    margin: auto 0;
+}
+
+.messages-nav .dialog-block .avatar-block .user-avatar,
+.messages-body .dialog-block .avatar-block .user-avatar
+{
+    display: block;
+
+    width: 40px;
+    height: 40px;
+
+    border: 1px solid #fff;
+    -webkit-border-radius: 50%;
+            border-radius: 50%;
+}
+
+.messages-nav .dialog-block .desc-block,
+.messages-body .dialog-block .desc-block
+{
+    position: relative;
+
+    display: block;
+
+    width: 180px;
+    margin: auto 0 auto 10px;
+}
+
+.messages-nav .dialog-block .desc-block span,
+.messages-body .dialog-block .desc-block span
+{
+    font-weight: bold;
+    line-height: 1.4em;
+
+    display: block;
+    display: -webkit-box;
+    overflow: hidden;
+
+    max-height: 2.8em;
+
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+
+    color: #264c5c;
+
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+.messages-nav
+{
+    width: 210px;
+}
+
+.messages-nav .list-dialog
+{
+    height: 610px;
+    max-height: 610px;
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+}
+
+.messages-nav .list-dialog > li + li
+{
+    border-top: 1px solid #d4e0e9;
+}
+
+.messages-nav .list-dialog_item
+{
+    position: relative;
+
+    display: block;
+
+    padding: 10px 15px 10px 10px;
+
+    border-left: 5px solid transparent;
+}
+
+.messages-nav .list-dialog_item .control
+{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+
+    display: none;
+}
+
+.messages-nav .list-dialog_item .control .close:before,
+.messages-nav .list-dialog_item .control .close:after
+{
+    background: #264c5c;
+}
+
+.messages-nav .list-dialog_item.active
+{
+    border-left: 5px solid #38b0be;
+    background: #fcfcfc;
+}
+
+.messages-nav .list-dialog_item:focus,
+.messages-nav .list-dialog_item:hover
+{
+    background: #f2f2f2;
+}
+
+.messages-nav .list-dialog_item:focus .dialog-block,
+.messages-nav .list-dialog_item:hover .dialog-block
+{
+    text-decoration: none;
+}
+
+.messages-nav .list-dialog_item:focus .control,
+.messages-nav .list-dialog_item:hover .control
+{
+    display: block;
+}
+
+.messages-body
+{
+    width: 100%;
+    margin-left: 6px;
+}
+
+.messages-body_head
+{
+    position: relative;
+
+    height: 65px;
+    padding: 15px;
+
+    border-bottom: 1px solid #d4e0e9;
+}
+
+.messages-body_head .activity
+{
+    position: absolute;
+    right: 15px;
+    bottom: 0;
+
+    display: block;
+
+    text-align: right;
+
+    color: #a6a6a6;
+}
+
+.messages-body_content
+{
+    height: 545px;
+    max-height: 545px;
+    margin: 0;
+    padding: 20px;
+
+    list-style: none;
+}
+
+.messages-body_content .message_item
+{
+    position: relative;
+
+    display: block;
+
+    padding: 10px 15px 10px 10px;
+}
+
+.messages-body_content .message_item .bubble
+{
+    width: 260px;
+    padding: 10px;
+}
+
+.messages-body_content .message_item .bubble p
+{
+    margin-bottom: 10px;
+}
+
+.messages-body_content .message_item .bubble p.activity
+{
+    font-size: .9em;
+
+    margin-bottom: 0;
+}
+
+.messages-body_content .message_item .bubble p.status
+{
+    position: absolute;
+    right: 30px;
+    bottom: 9px;
+
+    text-align: right;
+
+    color: #38b0be;
+}
+
+.messages-body_content .message_item .bubble:before
+{
+    position: absolute;
+    bottom: 10px;
+
+    display: block;
+
+    width: 10px;
+    height: 10px;
+
+    content: '';
+
+    border: 10px solid transparent;
+}
+
+.messages-body_content .message_item--from .bubble
+{
+    color: #fff;
+    background: #38b0be;
+}
+
+.messages-body_content .message_item--from .bubble:before
+{
+    left: -9px;
+
+    border-right: 10px solid #38b0be;
+    border-bottom: 10px solid #38b0be;
+}
+
+.messages-body_content .message_item--to .bubble
+{
+    margin-left: 307px;
+
+    background: #f1f5f8;
+}
+
+.messages-body_content .message_item--to .bubble p.activity
+{
+    font-size: .9em;
+
+    color: #a6a6a6;
+}
+
+.messages-body_content .message_item--to .bubble:before
+{
+    right: -4px;
+
+    border-bottom: 10px solid #f1f5f8;
+    border-left: 10px solid #f1f5f8;
+}
+
+.messages-form
+{
+    height: 55px;
+    margin-top: 15px;
+    padding: 10px 0;
+}
+
 /*=== страницы ===*/
 
 h1.page-name,
 h2.page-account-name
 {
     margin-top: 0;
+}
+
+.nice-scroll
+{
+    overflow-y: hidden;
 }
 
 .p-main .select-header
@@ -5895,7 +6316,9 @@ fieldset[disabled] .p-main .select-header_btn-right.focus
     margin-bottom: 35px;
 }
 
-.p-sign .signin-block_warp .form-group label
+.p-sign .signin-block_warp .form-group label,
+.p-sign .signin-block_warp .form-group .p-account .body-block form.form .label-pass-from-sms,
+.p-account .body-block form.form .p-sign .signin-block_warp .form-group .label-pass-from-sms
 {
     display: block;
 }
@@ -5920,7 +6343,9 @@ fieldset[disabled] .p-main .select-header_btn-right.focus
     margin-bottom: 25px;
 }
 
-.p-sign .signup-block_warp .form-group label
+.p-sign .signup-block_warp .form-group label,
+.p-sign .signup-block_warp .form-group .p-account .body-block form.form .label-pass-from-sms,
+.p-account .body-block form.form .p-sign .signup-block_warp .form-group .label-pass-from-sms
 {
     display: block;
 }
@@ -5935,7 +6360,9 @@ fieldset[disabled] .p-main .select-header_btn-right.focus
     margin-bottom: 40px;
 }
 
-.p-sign .reset-block_warp .form-group label
+.p-sign .reset-block_warp .form-group label,
+.p-sign .reset-block_warp .form-group .p-account .body-block form.form .label-pass-from-sms,
+.p-account .body-block form.form .p-sign .reset-block_warp .form-group .label-pass-from-sms
 {
     display: block;
 }
@@ -5963,6 +6390,7 @@ fieldset[disabled] .p-main .select-header_btn-right.focus
 .p-account .body-block
 {
     padding-top: 45px;
+    padding-bottom: 25px;
 }
 
 .p-account .body-block .dropdown
@@ -5979,9 +6407,49 @@ fieldset[disabled] .p-main .select-header_btn-right.focus
             box-shadow: 2px 2px 3px 0 rgba(0, 0, 0, .1), 2px 2px 4px -4px rgba(0, 0, 0, .4);
 }
 
+.p-account .body-block form.form label,
+.p-account .body-block form.form .label-pass-from-sms
+{
+    display: block;
+}
+
 .p-account .body-block form.form .btn.btn--geo-link
 {
     margin-top: 35px;
+}
+
+.p-account .body-block form.form .preload
+{
+    position: relative;
+
+    display: block;
+
+    margin-top: 10px;
+}
+
+.p-account .body-block form.form .preload-avatar
+{
+    position: absolute;
+
+    display: block;
+
+    width: 100%;
+    height: 70px;
+}
+
+.p-account .body-block form.form .label-pass-from-sms
+{
+    margin-top: 15px;
+}
+
+.p-account .body-block form.form .inp-pass-from-sms
+{
+    margin-top: 7px;
+}
+
+.p-account .body-block .pagination
+{
+    margin-bottom: 0;
 }
 
 @media screen and (-webkit-min-device-pixel-ratio: 0)
