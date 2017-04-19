@@ -497,4 +497,46 @@ e(this):c.doc,k=new N(c,e(this)),e(this).data("__nicescroll",k));h.push(k)});ret
         $(this).scrollTop(this.scrollHeight);
     });
     
+    //-- Start yandex-map --//
+    if ($('#map-bg-main').length > 0) {
+        var bgSearchMap;
+        ymaps.ready(initYaMap);
+        
+        function initYaMap() { 
+            bgSearchMap = new ymaps.Map('map-bg-main', {
+                center: [55.76, 37.64],
+                zoom: 7,
+                controls: [],
+            });
+            
+            myPlacemark = new ymaps.Placemark([55.76, 37.64], { 
+                hintContent: '1', 
+                balloonContent: 'Столица России' 
+            });
+
+            bgSearchMap.geoObjects.add(myPlacemark);
+            bgSearchMap.events.add('sizechange', function(e) {
+                console.log(22);
+            });
+        }
+    }
+    //-- End yandex-map --//
+    
+    // активируем скрыть/развернуть блок search
+    $('.js-btn-roll-search').click(function(e) {
+        e.preventDefault();
+        
+        var $this = $(this),
+            $box = $('.js-box-roll-search');
+        
+        $box.slideToggle();
+        $this.toggleClass('btn--roll-25-up');
+        
+        if ($this.hasClass('btn--roll-25-up')) {
+            $this.text('Развернуть');
+        } else {
+            $this.text('Свернуть');
+        }
+    });
+    
 })(jQuery);
