@@ -1282,6 +1282,8 @@ hr.white
 .icon.icon--catalog-black,
 .icon.icon--catalog-brand,
 .icon.icon--catalog-white,
+.icon.icon--edit-brand-20,
+.btn--edit-brand-20::before,
 .icon.icon--expand-brand-25,
 .btn--expand-brand-25::before,
 .icon.icon--favorite-danger,
@@ -1344,7 +1346,7 @@ footer.main-footer .share-box li:hover a > span.icon.icon--vk-white,
 footer.main-footer .share-box li:focus a > span.icon.icon--vk-white,
 .icon.icon--vk-white
 {
-    background: url('../../img/svg/sprite-ba26b5a7.svg') no-repeat;
+    background: url('../../img/svg/sprite-2cd3927f.svg') no-repeat;
 }
 
 .icon.icon--catalog-black
@@ -1360,7 +1362,7 @@ footer.main-footer .share-box li:focus a > span.icon.icon--vk-white,
 
 .icon.icon--catalog-brand
 {
-    background-position: 66.66666666666667% 90.56603773584905%;
+    background-position: 100% 0;
 }
 
 .icon.icon--catalog-brand-size
@@ -1380,6 +1382,19 @@ footer.main-footer .share-box li:focus a > span.icon.icon--vk-white,
     height: 120px;
 }
 
+.icon.icon--edit-brand-20,
+.btn--edit-brand-20::before
+{
+    background-position: 99.1304347826087% 65.75342465753425%;
+}
+
+.icon.icon--edit-brand-20-size,
+.btn--edit-brand-20::before
+{
+    width: 20px;
+    height: 20px;
+}
+
 .icon.icon--expand-brand-25,
 .btn--expand-brand-25::before
 {
@@ -1396,7 +1411,7 @@ footer.main-footer .share-box li:focus a > span.icon.icon--vk-white,
 .icon.icon--favorite-danger,
 .btn--favorite-danger::before
 {
-    background-position: 87.5% 77.05382436260624%;
+    background-position: 94.64285714285714% 67.98866855524079%;
 }
 
 .icon.icon--favorite-danger-size,
@@ -1466,7 +1481,7 @@ footer.main-footer .share-box li:focus a > span.icon.icon--vk-white,
 footer.main-footer .share-box li:hover a > span.icon.icon--fb-white,
 footer.main-footer .share-box li:focus a > span.icon.icon--fb-white
 {
-    background-position: 43.956043956043956% 100%;
+    background-position: 91.64835164835165% 84.44444444444444%;
 }
 
 .icon.icon--fb-brand-size
@@ -1477,7 +1492,7 @@ footer.main-footer .share-box li:focus a > span.icon.icon--fb-white
 
 .icon.icon--fb-white
 {
-    background-position: 91.64835164835165% 84.44444444444444%;
+    background-position: 27.47252747252747% 100%;
 }
 
 .icon.icon--fb-white-size
@@ -1488,7 +1503,7 @@ footer.main-footer .share-box li:focus a > span.icon.icon--fb-white
 
 .icon.icon--geo-brand
 {
-    background-position: 87.5% 67.98866855524079%;
+    background-position: 87.5% 77.05382436260624%;
 }
 
 .icon.icon--geo-brand-size
@@ -1500,7 +1515,7 @@ footer.main-footer .share-box li:focus a > span.icon.icon--fb-white
 .icon.icon--geo-brand-20,
 .btn--geo-brand-20::before
 {
-    background-position: 99.1304347826087% 74.52054794520548%;
+    background-position: 78.26086956521739% 92.05479452054794%;
 }
 
 .icon.icon--geo-brand-20-size,
@@ -1513,7 +1528,7 @@ footer.main-footer .share-box li:focus a > span.icon.icon--fb-white
 .icon.icon--geo-brand-25,
 .btn--geo-brand-25::before
 {
-    background-position: 38.46153846153846% 100%;
+    background-position: 21.978021978021978% 100%;
 }
 
 .icon.icon--geo-brand-25-size,
@@ -1526,7 +1541,7 @@ footer.main-footer .share-box li:focus a > span.icon.icon--fb-white
 .icon.icon--geo-white,
 .btn--geo::before
 {
-    background-position: 80.35714285714286% 77.05382436260624%;
+    background-position: 87.5% 67.98866855524079%;
 }
 
 .icon.icon--geo-white-size,
@@ -1538,7 +1553,7 @@ footer.main-footer .share-box li:focus a > span.icon.icon--fb-white
 
 .icon.icon--instagram-black
 {
-    background-position: 71.42857142857143% 100%;
+    background-position: 32.967032967032964% 100%;
 }
 
 .icon.icon--instagram-black-size
@@ -1551,7 +1566,7 @@ footer.main-footer .share-box li:focus a > span.icon.icon--fb-white
 footer.main-footer .share-box li:hover a > span.icon.icon--instagram-white,
 footer.main-footer .share-box li:focus a > span.icon.icon--instagram-white
 {
-    background-position: 27.47252747252747% 100%;
+    background-position: 43.956043956043956% 100%;
 }
 
 .icon.icon--instagram-brand-size
@@ -1562,7 +1577,7 @@ footer.main-footer .share-box li:focus a > span.icon.icon--instagram-white
 
 .icon.icon--instagram-white
 {
-    background-position: 16.483516483516482% 100%;
+    background-position: 86.15384615384616% 84.44444444444444%;
 }
 
 .icon.icon--instagram-white-size
@@ -1584,7 +1599,7 @@ footer.main-footer .share-box li:focus a > span.icon.icon--instagram-white
 
 .icon.icon--list-brand
 {
-    background-position: 100% 0;
+    background-position: 0 0;
 }
 
 .icon.icon--list-brand-size
@@ -1595,7 +1610,7 @@ footer.main-footer .share-box li:focus a > span.icon.icon--instagram-white
 
 .icon.icon--list-white
 {
-    background-position: 0 0;
+    background-position: 66.66666666666667% 90.56603773584905%;
 }
 
 .icon.icon--list-white-size
@@ -1640,7 +1655,7 @@ footer.main-footer .share-box li:focus a > span.icon.icon--instagram-white
 .icon.icon--menu,
 .btn--menu::before
 {
-    background-position: 80.35714285714286% 86.11898016997168%;
+    background-position: 80.35714285714286% 77.05382436260624%;
 }
 
 .icon.icon--menu-size,
@@ -1678,7 +1693,7 @@ footer.main-footer .share-box li:focus a > span.icon.icon--instagram-white
 
 .icon.icon--preload-white-15
 {
-    background-position: 98.06451612903226% 68%;
+    background-position: 98.06451612903226% 69.33333333333333%;
 }
 
 .icon.icon--preload-white-15-size
@@ -1689,7 +1704,7 @@ footer.main-footer .share-box li:focus a > span.icon.icon--instagram-white
 
 .icon.icon--preload-white-20
 {
-    background-position: 99.1304347826087% 64.86486486486487%;
+    background-position: 99.1304347826087% 73.51351351351352%;
 }
 
 .icon.icon--preload-white-20-size
@@ -1700,7 +1715,7 @@ footer.main-footer .share-box li:focus a > span.icon.icon--instagram-white
 
 .icon.icon--preload-white-25
 {
-    background-position: 86.15384615384616% 84.44444444444444%;
+    background-position: 49.45054945054945% 100%;
 }
 
 .icon.icon--preload-white-25-size
@@ -1712,7 +1727,7 @@ footer.main-footer .share-box li:focus a > span.icon.icon--instagram-white
 .icon.icon--roll-brand-25,
 .btn--roll-25::before
 {
-    background-position: 49.45054945054945% 100%;
+    background-position: 54.94505494505494% 100%;
 }
 
 .icon.icon--roll-brand-25-size,
@@ -1724,7 +1739,7 @@ footer.main-footer .share-box li:focus a > span.icon.icon--instagram-white
 
 .icon.icon--twitter-black
 {
-    background-position: 54.94505494505494% 100%;
+    background-position: 60.43956043956044% 100%;
 }
 
 .icon.icon--twitter-black-size
@@ -1737,7 +1752,7 @@ footer.main-footer .share-box li:focus a > span.icon.icon--instagram-white
 footer.main-footer .share-box li:hover a > span.icon.icon--twitter-white,
 footer.main-footer .share-box li:focus a > span.icon.icon--twitter-white
 {
-    background-position: 60.43956043956044% 100%;
+    background-position: 65.93406593406593% 100%;
 }
 
 .icon.icon--twitter-brand-size
@@ -1748,7 +1763,7 @@ footer.main-footer .share-box li:focus a > span.icon.icon--twitter-white
 
 .icon.icon--twitter-white
 {
-    background-position: 65.93406593406593% 100%;
+    background-position: 71.42857142857143% 100%;
 }
 
 .icon.icon--twitter-white-size
@@ -1782,7 +1797,7 @@ footer.main-footer .share-box li:focus a > span.icon.icon--twitter-white
 .icon.icon--user-white,
 .btn--sign::before
 {
-    background-position: 94.64285714285714% 67.98866855524079%;
+    background-position: 80.35714285714286% 86.11898016997168%;
 }
 
 .icon.icon--user-white-size,
@@ -1794,7 +1809,7 @@ footer.main-footer .share-box li:focus a > span.icon.icon--twitter-white
 
 .icon.icon--vk-black
 {
-    background-position: 32.967032967032964% 100%;
+    background-position: 38.46153846153846% 100%;
 }
 
 .icon.icon--vk-black-size
@@ -1807,7 +1822,7 @@ footer.main-footer .share-box li:focus a > span.icon.icon--twitter-white
 footer.main-footer .share-box li:hover a > span.icon.icon--vk-white,
 footer.main-footer .share-box li:focus a > span.icon.icon--vk-white
 {
-    background-position: 21.978021978021978% 100%;
+    background-position: 16.483516483516482% 100%;
 }
 
 .icon.icon--vk-brand-size
@@ -2037,8 +2052,6 @@ small,
 .form-group label,
 .form-group .p-account .body-block form.form .label-pass-from-sms,
 .p-account .body-block form.form .form-group .label-pass-from-sms,
-.cart--author-info .body-avatar_title,
-.cart--author-info .body-description_title,
 .list-out_head > div,
 .specification-type,
 .specification-count-label,
@@ -2380,6 +2393,11 @@ input[type='search'].form-control
 input[type='search']
 {
     -webkit-appearance: none;
+}
+
+input[type='date']
+{
+    background: transparent;
 }
 
 .form-group
@@ -3883,6 +3901,7 @@ fieldset[disabled]
 .btn--favorite-danger-25,
 .btn--roll-25,
 .btn--expand-brand-25,
+.btn--edit-brand-20,
 .btn--geo
 {
     position: relative;
@@ -3902,6 +3921,7 @@ fieldset[disabled]
 .btn--favorite-danger-25::before,
 .btn--roll-25::before,
 .btn--expand-brand-25::before,
+.btn--edit-brand-20::before,
 .btn--geo::before
 {
     position: absolute;
@@ -4184,6 +4204,88 @@ fieldset[disabled] .btn--expand-brand-25.focus
 }
 
 .btn--expand-brand-25::before
+{
+    top: 5px;
+}
+
+.btn--edit-brand-20
+{
+    display: inline-block;
+
+    padding-left: 30px;
+
+    color: #264c5c;
+    border-color: transparent;
+    background-color: transparent;
+}
+
+.btn--edit-brand-20:focus,
+.btn--edit-brand-20.focus
+{
+    color: #264c5c;
+    border-color: transparent;
+    background-color: transparent;
+}
+
+.btn--edit-brand-20:hover
+{
+    color: #264c5c;
+    border-color: transparent;
+    background-color: transparent;
+}
+
+.btn--edit-brand-20:active,
+.btn--edit-brand-20.active,
+.open > .btn--edit-brand-20.dropdown-toggle
+{
+    color: #264c5c;
+    border-color: transparent;
+    background-color: transparent;
+}
+
+.btn--edit-brand-20:active:hover,
+.btn--edit-brand-20:active:focus,
+.btn--edit-brand-20:active.focus,
+.btn--edit-brand-20.active:hover,
+.btn--edit-brand-20.active:focus,
+.btn--edit-brand-20.active.focus,
+.open > .btn--edit-brand-20.dropdown-toggle:hover,
+.open > .btn--edit-brand-20.dropdown-toggle:focus,
+.open > .btn--edit-brand-20.dropdown-toggle.focus
+{
+    color: #264c5c;
+    border-color: transparent;
+    background-color: transparent;
+}
+
+.btn--edit-brand-20:active,
+.btn--edit-brand-20.active,
+.open > .btn--edit-brand-20.dropdown-toggle
+{
+    background-image: none;
+}
+
+.btn--edit-brand-20.disabled:hover,
+.btn--edit-brand-20.disabled:focus,
+.btn--edit-brand-20.disabled.focus,
+.btn--edit-brand-20[disabled]:hover,
+.btn--edit-brand-20[disabled]:focus,
+.btn--edit-brand-20[disabled].focus,
+fieldset[disabled] .btn--edit-brand-20:hover,
+fieldset[disabled] .btn--edit-brand-20:focus,
+fieldset[disabled] .btn--edit-brand-20.focus
+{
+    border-color: transparent;
+    background-color: transparent;
+}
+
+.btn--edit-brand-20 .badge
+{
+    color: transparent;
+    background-color: #264c5c;
+}
+
+.btn--edit-brand-20::before
 {
     top: 5px;
 }
@@ -5598,11 +5700,6 @@ footer.main-footer .copyright
     width: 270px;
 }
 
-.cart--author-info .body-avatar_title
-{
-    font-size: .8em;
-}
-
 .cart--author-info .body-avatar_item
 {
     position: relative;
@@ -5659,11 +5756,6 @@ footer.main-footer .copyright
     display: block;
 }
 
-.cart--author-info .body-description_title
-{
-    font-size: .8em;
-}
-
 .cart--author-info .body-description_phone
 {
     font-size: 1.4em;
@@ -5677,6 +5769,47 @@ footer.main-footer .copyright
     margin-top: 34px;
 
     text-align: right;
+}
+
+.cart--comment
+{
+    padding: 25px;
+}
+
+.cart--comment .users
+{
+    padding: 0;
+
+    list-style: none;
+
+    margiin: 0;
+}
+
+.cart--comment .users_item
+{
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display:         flex;
+
+    width: 100%;
+
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+            align-items: center;
+}
+
+.cart--comment .users_item > div
+{
+    display: block;
+
+    width: auto;
+
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+            justify-content: center;
 }
 
 .panel
@@ -6014,6 +6147,14 @@ footer.main-footer .copyright
     -webkit-justify-content: flex-start;
     -ms-flex-pack: start;
             justify-content: flex-start;
+}
+
+.list-out_item > div.tool.center
+{
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+            justify-content: center;
 }
 
 .list-out--full.list-out .list-out_item
@@ -7468,6 +7609,102 @@ fieldset[disabled] .p-main .select-header_btn-right.focus
 .p-account .body-block .pagination
 {
     margin-bottom: 0;
+}
+
+.p-account .account-description
+{
+    padding-top: 20px;
+}
+
+.p-account .account-description .account-avatar-warp
+{
+    position: relative;
+
+    display: block;
+
+    height: 100%;
+}
+
+.p-account .account-description .account-avatar-warp .account-avatar
+{
+    width: 100%;
+    height: auto;
+
+    -webkit-border-radius: 5px;
+            border-radius: 5px;
+}
+
+.p-account .account-description .edit-warp
+{
+    position: absolute;
+    top: -30px;
+
+    display: block;
+}
+
+.p-account .account-description .user-name
+{
+    font-size: 2.2em;
+    font-weight: bold;
+
+    margin: 0 0 20px;
+}
+
+.p-account .account-description .rating
+{
+    position: relative;
+
+    display: block;
+}
+
+.p-account .account-description .rating--left
+{
+    position: relative;
+
+    display: block;
+
+    width: 100px;
+}
+
+.p-account .account-description .rating--left span
+{
+    display: block;
+
+    margin-bottom: 5px;
+}
+
+.p-account .account-description .rating--left span.big
+{
+    font-size: 2.8em;
+    font-weight: bold;
+    line-height: 1em;
+}
+
+.p-account .account-description .rating--right
+{
+    position: absolute;
+    top: 0;
+
+    display: block;
+
+    margin-left: 100px;
+}
+
+.p-account .account-description .rating--right p
+{
+    line-height: 1.2em;
+}
+
+.p-account .account-description .contacts
+{
+    margin: 20px 0 20px;
+}
+
+.p-account .account-description .contacts .phone
+{
+    font-size: 2em;
+
+    display: block;
 }
 
 .p-rent form.form label,
