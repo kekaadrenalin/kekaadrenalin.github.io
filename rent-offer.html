@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Аренда складских помещений</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&amp;subset=cyrillic,cyrillic-ext">
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+</head>
+<body>
+    <div class="warp">
+        <header>
+            <nav class="main-menu">
+                <div class="main-menu__wrap">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <div class="js-menu-active">
+                                    <a href="/main.html" class="brand center">Маркет Складской<br>Логистики</a>
+                                    <div class="nav nav--menu">
+                                        <button type="button" class="btn btn--menu nav-btn js-menu-activate"></button>
+                                    </div>
+                                    <div class="nav nav--geo hidden-xs hidden-sm">
+                                        <button type="button" class="btn btn--geo nav-btn arrow arrow--up">Петропавловск</button>
+                                    </div>
+                                    <div class="nav nav--user hidden-xs">
+                                        <a href="#!" class="btn btn--user nav-btn"><img src="/img/users/maks.jpg"> Максим Б.</a>
+                                    </div>
+                                    <div class="nav nav--messages hidden-xs hidden-sm">
+                                        <button type="button" class="btn btn--messages nav-btn"></button>
+                                        <span class="badge">3</span>
+                                    </div>
+                                    <div class="nav nav--notices hidden-xs hidden-sm">
+                                        <button type="button" class="btn btn--notices nav-btn"></button>
+                                        <span class="badge">2</span>
+                                    </div>
+                                </div>
+                                <div class="hide js-menu-active">
+                                    <a href="/main.html" class="brand left">Маркет Складской<br>Логистики</a>
+                                    <div class="nav nav--close">
+                                        <a href="#!" class="btn btn--close nav-btn js-menu-activate"><span class="close"></span></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>    
+                    </div>
+                    <div class="main-menu__body hide js-menu-active">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    <div class="visible-xs">
+                                        <p>Личный кабинет</p>
+                                        <ul>
+                                            <li><a href="#!">Создать что-то</a></li>
+                                            <li><a href="#!">Уведомления</a></li>
+                                            <li><a href="#!">Сообщения</a></li>
+                                            <li><a href="#!">Выйти</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-sm-4 col-sm-4 col-xs-6">
+                                    <p>Аренда</p>
+                                    <ul>
+                                        <li><a href="#!">Предложения</a></li>
+                                        <li><a href="#!">Запросы</a></li>
+                                        <li><a href="#!">Категория 3</a></li>
+                                        <li><a href="#!">Категория 4</a></li>
+                                    </ul>
+                                    <p>Услуги и товары</p>
+                                    <ul>
+                                        <li><a href="#!">Предложения</a></li>
+                                        <li><a href="#!">Запросы</a></li>
+                                        <li><a href="#!">Категория 3</a></li>
+                                        <li><a href="#!">Категория 4</a></li>
+                                    </ul>
+                                    <p>Хозяйственные нужды</p>
+                                    <ul>
+                                        <li><a href="#!">Категория 1</a></li>
+                                        <li><a href="#!">Категория 2</a></li>
+                                        <li><a href="#!">Категория 3</a></li>
+                                        <li><a href="#!">Категория 4</a></li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-5 col-sm-4 col-xs-6">
+                                    <p>Спецтехника и оборудование</p>
+                                    <ul>
+                                        <li><a href="#!">Предложения</a></li>
+                                        <li><a href="#!">Запросы</a></li>
+                                        <li><a href="#!">Категория 3</a></li>
+                                        <li><a href="#!">Категория 4</a></li>
+                                    </ul>
+                                    <p>Безопасность</p>
+                                    <ul>
+                                        <li><a href="#!">Предложения</a></li>
+                                        <li><a href="#!">Запросы</a></li>
+                                        <li><a href="#!">Категория 3</a></li>
+                                        <li><a href="#!">Категория 4</a></li>
+                                    </ul>
+                                    <p>Персонал</p>
+                                    <ul>
+                                        <li><a href="#!">Вакансии</a></li>
+                                        <li><a href="#!">Резюме</a></li>
+                                        <li><a href="#!">Категория 3</a></li>
+                                        <li><a href="#!">Категория 4</a></li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-3 col-sm-4 col-xs-12">
+                                    <div class="row">
+                                        <div class="col-md-12 col-sm-12 col-xs-6">
+                                        <p>О сервисе</p>
+                                            <ul>
+                                                <li><a href="#!">Частые вопросы</a></li>
+                                                <li><a href="#!">О сервисе</a></li>
+                                                <li><a href="#!">Поддержка</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-md-12 col-sm-12 col-xs-6">
+                                            <p>Информация</p>
+                                            <ul>
+                                                <li><a href="#!">Категория 1</a></li>
+                                                <li><a href="#!">Категория 2</a></li>
+                                                <li><a href="#!">Категория 3</a></li>
+                                                <li><a href="#!">Категория 4</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        
+        <main class="p-rent">
+            <section class="bg-s bg-s--none p-head">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <ol class="breadcrumb">
+                                <li><a href="/main.html"><span>Главная<span></a></li>
+                                <li><span>Аренда<span></li>
+                                <li><span>Запросы<span></li>
+                                <li><span>С.-Петербург<span></li>
+                                <li class="active"><span>Запрос № 39204<span></li>
+                            </ol>
+                            <h1 class="page-search-name">Аренда складских помещений</h1>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="bg-s bg-s--grey rent-description">
+                <div class="container">
+                    <div class="specification">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <p class="specification-type">объект</p>
+                                <p class="specification-lg">230 м2</p>
+                                <p><a href="#!" class="specification-address">Московское шоссе, 23, вл. 18<br>Санкт-Петербург</a></p>
+                                <div class="range-w">
+                                    <span class="range range--left">30.11.2017</span>
+                                    <span class="range range--right">от 1 года</span>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <p class="specification-count-label">Ориентировочная стоимость</p>
+                                <p class="specification-lg text-danger">19 500 &#8381; в месяц</p>
+                                <p class="specification-count-per-year">1200 &#8381;/м2/год</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="specification">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <!-- Здесь крупное фото -->
+                                <div class="slider slider-main">
+                                    <div class="slide-label-count"><span class="icon icon--preload-white-25 icon--preload-white-25-size"></span>6</div>
+                                    <div class="slide-item"><img data-lazy="/img/list-cart-1.jpg"></div>
+                                    <div class="slide-item"><img data-lazy="/img/list-cart-2.jpg"></div>
+                                    <div class="slide-item"><img data-lazy="/img/list-cart-3.jpg"></div>
+                                    <div class="slide-item"><img data-lazy="/img/list-cart-2.jpg"></div>
+                                    <div class="slide-item"><img data-lazy="/img/list-cart-1.jpg"></div>
+                                    <div class="slide-item"><img data-lazy="/img/list-cart-3.jpg"></div>
+                                </div>
+                                <!-- А здесь лучше миниатюры, причем желательно подогнанные под размер -->
+                                <div class="slider slider-nav">
+                                    <div><img src="/img/list-cart-1.jpg"></div>
+                                    <div><img src="/img/list-cart-2.jpg"></div>
+                                    <div><img src="/img/list-cart-3.jpg"></div>
+                                    <div><img src="/img/list-cart-2.jpg"></div>
+                                    <div><img src="/img/list-cart-1.jpg"></div>
+                                    <div><img src="/img/list-cart-3.jpg"></div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-md-5 col-md-offset-1">
+                                <div class="cart cart--author-info">
+                                    <div class="body">
+                                        <div class="body-avatar">
+                                            <span class="body-avatar_title">Автор</span>
+                                            <div class="body-avatar_item">
+                                                <a href="#!" class="avatar">
+                                                    <img src="/img/users/maks.jpg" alt="">
+                                                </a>
+                                                <span class="name-block">
+                                                    <span class="name">Фрегат-Сервис</span>
+                                                    <a href="#!" class="city">С.-Петербург</a>
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="body-description">
+                                            <span class="body-description_title">Телефон</span>
+                                            <span class="body-description_phone">+7 962 *** ** 54</span>
+                                            <a href="#!" class="body-description_phone-link">Показать телефон</a>
+                                        </div>
+                                    </div>
+                                    <div class="footer">
+                                        <a href="#!" class="btn btn--favorite-danger-25 pull-left" title="Добавить в избранное"></a>
+                                        <button href="#!" class="btn btn--success">Сообщение</button>
+                                        <button href="#!" class="btn btn--danger">Отправить предложение</button>
+                                    </div>
+                                </div>
+                                <p class="specification">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="specification">
+                        <div class="row">
+                            <div class="col-sm-8">
+                                <p class="specification-label">общая информация об объекте</p>
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <p class="specification-t">Класс здания: B+</p>
+                                        <p class="specification-t">Электроснабжение: 2кВт</p>
+                                        <p class="specification-t">Водоснабжение: В наличии</p>
+                                        <p class="specification-t">Канализация: Отсутствует</p>
+                                        <p class="specification-t">Отопление: Отсутствует</p>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <p class="specification-t">Холод. оборудование: Охлаждение от +2..+8</p>
+                                        <p class="specification-t">Услуги кладовщика: Требуется</p>
+                                        <p class="specification-t">Безопасность: Охрана</p>
+                                        <p class="specification-t">Способ погрузки: Выбор способа</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <p class="specification-label">На карте <span class="pull-right"><button class="btn btn--expand-brand-25 text-uppercase">Развернуть карту</button></span></p>
+                                <div class="map" id="map-in-rent-offer"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+            </section>
+            
+            <section class="bg-s bg-s--grey related-queries">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <h2>Похожие объявления</h2>
+                            
+                            <div class="list-out list-out--full">
+                                <div class="list-out_head">
+                                    <div class="object">Объект</div>
+                                    <div class="address">Адрес</div>
+                                    <div class="cost">Стоимость</div>
+                                    <div class="tool">Дата</div>
+                                </div>
+                                <div class="list-out_body">
+                                    <div class="list-out_item">
+                                        <div class="number">1</div>
+                                        <div class="preview">
+                                            <div class="photo" style="background-image: url(/img/list-cart-4.jpg);">
+                                                <a href="#!" target="_blank">
+                                                    <span class="count-warp">
+                                                        <span class="icon icon--preload-white-20 icon--preload-white-20-size"></span>
+                                                        <span class="count">1</span>
+                                                    </span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="square">10 м<sup>2</sup></div>
+                                        <div class="address">ул. Челюскинцев, д. 82, к. 5, С.Петербург, к...</div>
+                                        <div class="cost">9 043 321 руб./мес</div>
+                                        <div class="tool">12.02.2017</div>
+                                    </div>
+                                    <div class="list-out_item">
+                                        <div class="number">2</div>
+                                        <div class="preview">
+                                            <div class="photo" style="">
+                                                <a href="#!" target="_blank">
+                                                    <span class="count-warp">
+                                                        <span class="icon icon--preload-white-20 icon--preload-white-20-size"></span>
+                                                        <span class="count">0</span>
+                                                    </span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="square">10 м<sup>2</sup></div>
+                                        <div class="address">ул. Челюскинцев, д. 82, к. 5, С.Петербург, к...</div>
+                                        <div class="cost">9 043 321 руб./мес</div>
+                                        <div class="tool">12.02.2017</div>
+                                    </div>
+                                    <div class="list-out_item">
+                                        <div class="number">3</div>
+                                        <div class="preview">
+                                            <div class="photo" style="background-image: url(/img/list-cart-1.jpg);">
+                                                <a href="#!" target="_blank">
+                                                    <span class="count-warp">
+                                                        <span class="icon icon--preload-white-20 icon--preload-white-20-size"></span>
+                                                        <span class="count">0</span>
+                                                    </span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="square">1 410 м<sup>2</sup></div>
+                                        <div class="address">ул. Челюскинцев, д. 82, к. 5, С.Петербург, к...</div>
+                                        <div class="cost">29 043 321 руб./мес</div>
+                                        <div class="tool">12.02.2017</div>
+                                    </div>
+                                    <div class="list-out_item">
+                                        <div class="number">4</div>
+                                        <div class="preview">
+                                            <div class="photo" style="background-image: url(/img/list-cart-2.jpg);">
+                                                <a href="#!" target="_blank">
+                                                    <span class="count-warp">
+                                                        <span class="icon icon--preload-white-20 icon--preload-white-20-size"></span>
+                                                        <span class="count">0</span>
+                                                    </span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="square">15 410 м<sup>2</sup></div>
+                                        <div class="address">ул. Челюскинцев, д. 82, к. 5, С.Петербург, к...</div>
+                                        <div class="cost">143 321 руб./мес</div>
+                                        <div class="tool">12.02.2017</div>
+                                    </div>
+                                    <div class="list-out_item">
+                                        <div class="number">5</div>
+                                        <div class="preview">
+                                            <div class="photo" style="background-image: url(/img/list-cart-3.jpg);">
+                                                <a href="#!" target="_blank">
+                                                    <span class="count-warp">
+                                                        <span class="icon icon--preload-white-20 icon--preload-white-20-size"></span>
+                                                        <span class="count">210</span>
+                                                    </span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="square">15 410 м<sup>2</sup></div>
+                                        <div class="address">ул. Челюскинцев, д. 82, к. 5, С.Петербург, к...</div>
+                                        <div class="cost">143 321 руб./мес</div>
+                                        <div class="tool">12.02.2017</div>
+                                    </div>
+                                    <div class="list-out_item">
+                                        <div class="number">6</div>
+                                        <div class="preview">
+                                            <div class="photo" style="background-image: url(/img/list-cart-4.jpg);">
+                                                <a href="#!" target="_blank">
+                                                    <span class="count-warp">
+                                                        <span class="icon icon--preload-white-20 icon--preload-white-20-size"></span>
+                                                        <span class="count">0</span>
+                                                    </span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="square">1 410 м<sup>2</sup></div>
+                                        <div class="address">ул. Челюскинцев, д. 82, к. 5, С.Петербург, к...</div>
+                                        <div class="cost">14 321 руб./мес</div>
+                                        <div class="tool">12.02.2017</div>
+                                    </div>
+                                    <div class="list-out_item">
+                                        <div class="number">7</div>
+                                        <div class="preview">
+                                            <div class="photo" style="background-image: url(/img/list-cart-1.jpg);">
+                                                <a href="#!" target="_blank">
+                                                    <span class="count-warp">
+                                                        <span class="icon icon--preload-white-20 icon--preload-white-20-size"></span>
+                                                        <span class="count">22</span>
+                                                    </span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="square">15 410 м<sup>2</sup></div>
+                                        <div class="address">ул. Челюскинцев, д. 82, к. 5, С.Петербург, к...</div>
+                                        <div class="cost">145 321 руб./мес</div>
+                                        <div class="tool">12.02.2017</div>
+                                    </div>
+                                    <div class="list-out_item">
+                                        <div class="number">8</div>
+                                        <div class="preview">
+                                            <div class="photo" style="background-image: url(/img/list-cart-2.jpg);">
+                                                <a href="#!" target="_blank">
+                                                    <span class="count-warp">
+                                                        <span class="icon icon--preload-white-20 icon--preload-white-20-size"></span>
+                                                        <span class="count">22</span>
+                                                    </span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="square">15 м<sup>2</sup></div>
+                                        <div class="address">ул. Челюскинцев, д. 82, к. 5, С.Петербург, к...</div>
+                                        <div class="cost">1 145 321 руб./мес</div>
+                                        <div class="tool">12.02.2017</div>
+                                    </div>
+                                    <div class="list-out_item">
+                                        <div class="number">9</div>
+                                        <div class="preview">
+                                            <div class="photo" style="background-image: url(/img/list-cart-2.jpg);">
+                                                <a href="#!" target="_blank">
+                                                    <span class="count-warp">
+                                                        <span class="icon icon--preload-white-20 icon--preload-white-20-size"></span>
+                                                        <span class="count">22</span>
+                                                    </span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="square">15 м<sup>2</sup></div>
+                                        <div class="address">ул. Челюскинцев, д. 82, к. 5, С.Петербург, к...</div>
+                                        <div class="cost">1 145 321 руб./мес</div>
+                                        <div class="tool">12.02.2017</div>
+                                    </div>
+                                    <div class="list-out_item">
+                                        <div class="number">10</div>
+                                        <div class="preview">
+                                            <div class="photo" style="">
+                                                <a href="#!" target="_blank">
+                                                    <span class="count-warp">
+                                                        <span class="icon icon--preload-white-20 icon--preload-white-20-size"></span>
+                                                        <span class="count">7</span>
+                                                    </span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="square">215 м<sup>2</sup></div>
+                                        <div class="address">ул. Челюскинцев, д. 82, к. 5, С.Петербург, к...</div>
+                                        <div class="cost">12 145 321 руб./мес</div>
+                                        <div class="tool">12.02.2017</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-6">
+                                    <ul class="pagination">
+                                        <li><a href="#!">1</a></li>
+                                        <li><a href="#!">2</a></li>
+                                        <li class="active"><span>3</span></li>
+                                        <li><a href="#!">4</a></li>
+                                        <li><a href="#!">5</a></li>
+                                        <li class="none"><span>...</span></li>
+                                        <li><a href="#!">89</a></li>
+                                        <li><a href="#!">90</a></li>
+                                    </ul>
+                                </div>
+                                <div class="col-xs-6">
+                                    <div class="text-right">
+                                        <ul class="pagination pagination--p-right">
+                                            <li class="none"><span>Объявлений на странице</span></li>
+                                            <li class="active"><a href="#!">10</a></li>
+                                            <li><a href="#!">30</a></li>
+                                            <li><a href="#!">50</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+        </main>
+    </div>
+    
+    <footer class="main-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-6 col-sm-5 col-md-3">
+                    <h4>О компании</h4>
+                    <p><a href="#!" class="link--light">О нас</a></p>
+                    <p><a href="#!" class="link--light">FAQ</a></p>
+                    <p><a href="#!" class="link--light">Карьера</a></p>
+                    <p><a href="#!" class="link--light">Пользовательское соглашение</a></p>
+                    <p><a href="#!" class="link--light">Политика конфиденциальности</a></p>
+                    <p><a href="#!" class="link--light">Контакт / Поддержка</a></p>
+                </div>
+                <div class="col-xs-6 col-sm-4 col-md-3">
+                    <h4>Дополнительные услуги</h4>
+                    <p><a href="#!" class="link--light">Услуги для компаний</a></p>
+                    <p><a href="#!" class="link--light">Лучшие предложения</a></p>
+                    <p><a href="#!" class="link--light">Лучшие потребности</a></p>
+                </div>
+                <div class="hidden-xs col-sm-3 col-md-2">
+                    <h4>Мы в соцсетях</h4>
+                    <ul class="share-box list-inline">
+                        <li><a class="link--light" href="#!" title="Мы в Twitter" target="_blank"><span class="icon icon--twitter-white icon--twitter-white-size"></span></a></li>
+                        <li><a class="link--light" href="#!" title="Мы в VKontakte" target="_blank"><span class="icon icon--vk-white icon--vk-white-size"></span></a></li>
+                        <li><a class="link--light" href="#!" title="Мы в Facebook" target="_blank"><span class="icon icon--fb-white icon--fb-white-size"></span></a></li>
+                        <li><a class="link--light" href="#!" title="Мы в Instagram" target="_blank"><span class="icon icon--instagram-white icon--instagram-white-size"></span></a></li>
+                    </ul>
+                </div>
+                <div class="hidden-xs hidden-sm col-md-4">
+                    <h4>Подписка на рассылку</h4>
+                    <form class="form form--subscribe-footer">
+                        <input type="email" class="input-subscribe" placeholder="E-mail">
+                        <button class="btn btn--primary" type="submit">Отправить</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <div class="container">
+                <div class="text-center">© Маркет Складской Логистики, 2017</div>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="/js/global.js"></script>
+    <script src="/js/rent.js"></script>
+</body>
+</html>
