@@ -1,7 +1,6 @@
 (function($){
     // слайдер фото
     $('.slider-main').slick({
-        lazyLoad: 'progressive',
         slide: '.slide-item',
         slidesToShow: 1,
         slidesToScroll: 1,
