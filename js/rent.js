@@ -41,9 +41,18 @@
                 controls: [],
             });
 
+            var circleLayout = ymaps.templateLayoutFactory.createClass('<div class="map-placemark_layout_container"><div class="map-circle_layout">1</div></div>');
+
             myPlacemark = new ymaps.Placemark([55.76, 37.64], {
                 hintContent: '1',
                 balloonContent: 'Столица России'
+            }, {
+                iconLayout: circleLayout,
+                iconShape: {
+                    type: 'Circle',
+                    coordinates: [0, 0],
+                    radius: 20
+                }
             });
 
             myMap.geoObjects.add(myPlacemark);
