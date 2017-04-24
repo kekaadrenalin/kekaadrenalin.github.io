@@ -516,8 +516,8 @@ d.slice(e-c+1,e+c+2).addClass("slick-active").attr("aria-hidden","false")),0===a
     });
     
     //-- Start yandex-map --//
+    var bgSearchMap;
     if ($('#map-bg-main').length > 0) {
-        var bgSearchMap;
         ymaps.ready(initYaMap);
         
         function initYaMap() { 
@@ -526,35 +526,72 @@ d.slice(e-c+1,e+c+2).addClass("slick-active").attr("aria-hidden","false")),0===a
                 zoom: 7,
                 controls: [],
             });
+
+            var MyBalloonContentLayoutClass = ymaps.templateLayoutFactory.createClass(
+                '<div class="map-baloon-w"><div class="cart cart--baloon"><div class="row">' +
+                '<div class="col-xs-4"><div class="slider-warp"><div class="slider slider-item slider-map">' +
+                '<div class="slide-label-count">' +
+                '<span class="icon icon--preload-white-25 icon--preload-white-25-size"></span>2</div>' +
+                '<div class="slide-item"><img src="/img/list-cart-1.jpg"></div>' +
+                '<div class="slide-item"><img src="/img/list-cart-2.jpg"></div>' +
+                '</div></div>' +
+                '<p class="text-uppercase small">Объект</p>' +
+                '<p class="price">234 м<sup>2</sup></p>' +
+                '<p class="date">20.12.2016 | от 1 года</p>' +
+                '</div><div class="col-xs-8"><div class="row"><div class="col-xs-12">' +
+                '<p class="adress-w"><a class="address" href="#!">Петропавловск, Нагорная улица, 23</a></p>' +
+                '<p class="text-uppercase small">Ориентировочная стоимость</p>' +
+                '<p class="text-uppercase text-danger price">19 500 ₽/мес</p>' +
+                '<p class="text-uppercase small">1233 ₽/м<sup>2</sup>/год</p>' +
+                '</div></div><div class="row"><div class="col-xs-6">' +
+                '<div class="contacts"><div class="contacts-description"><span class="small text-uppercase">Контакты</span>' +
+                '<span class="contacts-description_phone">+7 495 812-**-54</span>' +
+                '<a href="#!" class="contacts-description_phone-link small">Показать контакты</a>' +
+                '</div></div></div><div class="col-xs-6">' +
+                ' <p class="btn-w"><button class="btn btn--favorite-danger-25" title="Добавить в избранное"></button>' +
+                '<button class="btn btn--mail-brand-l-25" title="Добавить в избранное"></button></p>' +
+                '<p><a href="#!" target="_blank" class="btn btn--danger btn--block">Подробнее</a></p>' +
+                '</div></div></div></div></div></div>'
+            );
+            var circleLayout = ymaps.templateLayoutFactory.createClass('<div class="map-placemark_layout_container"><div class="map-circle_layout">1</div></div>');
             
-            myPlacemark = new ymaps.Placemark([55.76, 37.64], { 
-                hintContent: '1', 
-                balloonContent: 'Столица России' 
+            myPlacemark = new ymaps.Placemark([54.08, 37.76], {
+                hintContent: 'Какое-то предложение',
+            }, {
+                balloonContentLayout: MyBalloonContentLayoutClass,
+                iconLayout: circleLayout,
+                iconShape: {
+                    type: 'Circle',
+                    coordinates: [0, 0],
+                    radius: 20
+                }
             });
 
             bgSearchMap.geoObjects.add(myPlacemark);
-            bgSearchMap.events.add('sizechange', function(e) {
-                console.log(22);
-            });
         }
     }
     //-- End yandex-map --//
-    
+
     // активируем скрыть/развернуть блок search
     $('.js-btn-roll-search').click(function(e) {
         e.preventDefault();
         
         var $this = $(this),
-            $box = $('.js-box-roll-search');
-        
-        $box.slideToggle();
-        $this.toggleClass('btn--roll-25-up');
-        
-        if ($this.hasClass('btn--roll-25-up')) {
-            $this.text('Развернуть');
-        } else {
-            $this.text('Свернуть');
-        }
+            $resultBlock = $('.block-search-result'),
+            $box = $('.js-box-roll-search'),
+            $overflow = $('.nice-scroll');
+
+        $box.slideToggle(450, function() {
+            $resultBlock.toggleClass('map-open');
+            $this.toggleClass('btn--roll-25-up');
+            $overflow.getNiceScroll().resize();
+
+            if ($this.hasClass('btn--roll-25-up')) {
+                $this.text('Расширенный поиск');
+            } else {
+                $this.text('Свернуть');
+            }
+        });
     });
     
 })(jQuery);
