@@ -572,6 +572,66 @@ d.slice(e-c+1,e+c+2).addClass("slick-active").attr("aria-hidden","false")),0===a
     }
     //-- End yandex-map --//
 
+    // yandex-map
+    if ($('#map-in-rent-offer').length > 0) {
+        var myMap;
+        ymaps.ready(initYaMap);
+
+        function initYaMap() {
+            myMap = new ymaps.Map('map-in-rent-offer', {
+                center: [55.76, 37.64],
+                zoom: 16,
+                controls: [],
+            });
+
+            var circleLayout = ymaps.templateLayoutFactory.createClass('<div class="map-placemark_layout_container"><div class="map-circle_layout">1</div></div>');
+
+            myPlacemark = new ymaps.Placemark([55.76, 37.64], {
+                hintContent: '1',
+                balloonContent: 'Столица России'
+            }, {
+                iconLayout: circleLayout,
+                iconShape: {
+                    type: 'Circle',
+                    coordinates: [0, 0],
+                    radius: 20
+                }
+            });
+
+            myMap.geoObjects.add(myPlacemark);
+        }
+    }
+
+    // yandex-map
+    if ($('#map-in-search--full').length > 0) {
+        var myMap;
+        ymaps.ready(initYaMap);
+
+        function initYaMap() {
+            myMap = new ymaps.Map('map-in-search--full', {
+                center: [55.76, 37.64],
+                zoom: 16,
+                controls: [],
+            });
+
+            var circleLayout = ymaps.templateLayoutFactory.createClass('<div class="map-placemark_layout_container"><div class="map-circle_layout">1</div></div>');
+
+            myPlacemark = new ymaps.Placemark([55.76, 37.64], {
+                hintContent: '1',
+                balloonContent: 'Столица России'
+            }, {
+                iconLayout: circleLayout,
+                iconShape: {
+                    type: 'Circle',
+                    coordinates: [0, 0],
+                    radius: 20
+                }
+            });
+
+            myMap.geoObjects.add(myPlacemark);
+        }
+    }
+
     // активируем скрыть/развернуть блок search
     $('.js-btn-roll-search').click(function(e) {
         e.preventDefault();
