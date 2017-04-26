@@ -6600,6 +6600,14 @@ footer.main-footer .copyright
     margin: 0 15px 0 25px;
 }
 
+.list-out--full.list-out .list-out_head > div.type,
+.list-out--full.list-out .list-out_item > div.type
+{
+    width: 10%;
+    max-width: 10%;
+    margin: 0 15px 0 25px;
+}
+
 .list-out--full.list-out .list-out_head > div.vacancy,
 .list-out--full.list-out .list-out_item > div.vacancy
 {
@@ -6608,6 +6616,7 @@ footer.main-footer .copyright
     margin: 0 15px 0 25px;
 }
 
+.list-out--full.list-out .list-out_head > div.type,
 .list-out--full.list-out .list-out_head > div.service,
 .list-out--full.list-out .list-out_head > div.vacancy
 {
@@ -7150,6 +7159,14 @@ footer.main-footer .copyright
     font-weight: bold;
 }
 
+.specification-title
+{
+    font-size: 2em;
+    font-weight: bold;
+
+    margin: 0 0 15px;
+}
+
 .specification-count-per-year,
 .specification-address
 {
@@ -7611,7 +7628,7 @@ p.page-search-description
     border: 1px solid #d4e0e9;
     -webkit-border-radius: 5px;
             border-radius: 5px;
-    background: #fcfcf9;
+    background: #fff;
 }
 
 .range-w .range--left
@@ -7645,12 +7662,14 @@ p.page-search-description
 }
 
 .p-rent .slider,
+.p-clean .slider,
 .p-search .slider
 {
     margin-bottom: 25px;
 }
 
 .p-rent .slider > div img,
+.p-clean .slider > div img,
 .p-search .slider > div img
 {
     width: 100%;
@@ -7658,12 +7677,14 @@ p.page-search-description
 }
 
 .p-rent .slider.slider-nav > div,
+.p-clean .slider.slider-nav > div,
 .p-search .slider.slider-nav > div
 {
     cursor: pointer;
 }
 
 .p-rent .slider.slider-nav > div img,
+.p-clean .slider.slider-nav > div img,
 .p-search .slider.slider-nav > div img
 {
     width: auto;
@@ -7671,12 +7692,14 @@ p.page-search-description
 }
 
 .p-rent .slider.slider-nav .slick-slide + .slick-slide,
+.p-clean .slider.slider-nav .slick-slide + .slick-slide,
 .p-search .slider.slider-nav .slick-slide + .slick-slide
 {
     margin-left: 25px;
 }
 
 .p-rent .slider .slide-label-count,
+.p-clean .slider .slide-label-count,
 .p-search .slider .slide-label-count
 {
     font-size: 1.2em;
@@ -7694,6 +7717,7 @@ p.page-search-description
 }
 
 .p-rent .slider .slide-label-count .icon,
+.p-clean .slider .slide-label-count .icon,
 .p-search .slider .slide-label-count .icon
 {
     position: relative;
@@ -8676,9 +8700,10 @@ fieldset[disabled] .p-main .select-header_btn-right.focus
 
 .p-personal .cart--author-info .body-avatar .avatar img
 {
-    width: 100%;
-    height: auto;
-    max-height: 200px;
+    width: auto;
+    max-width: 100%;
+    height: 100%;
+    max-height: 170px;
 
     -webkit-border-radius: 5px;
             border-radius: 5px;
@@ -8740,6 +8765,114 @@ fieldset[disabled] .p-main .select-header_btn-right.focus
 .p-personal .block-map #map-in-search--full
 {
     height: 175px;
+}
+
+.p-clean .sp-label
+{
+    font-size: 1.2em;
+
+    margin: 0 0 15px;
+}
+
+.p-clean .sp-label.big
+{
+    font-size: 2em;
+    font-weight: bold;
+    line-height: 1.4em;
+}
+
+.p-clean .sp-label.biger
+{
+    font-size: 1.4em;
+}
+
+.p-clean .sp-sub-label
+{
+    font-size: 1.2em;
+
+    margin: 0;
+}
+
+.p-clean .range-w
+{
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+.p-clean .cart--author-info
+{
+    height: 240px;
+    margin-bottom: 30px;
+    padding: 20px;
+}
+
+.p-clean .cart--author-info .body-avatar
+{
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display:         flex;
+
+    width: 100%;
+    height: 190px;
+
+    -webkit-flex-flow: column wrap;
+        -ms-flex-flow: column wrap;
+            flex-flow: column wrap;
+}
+
+.p-clean .cart--author-info .body-avatar_item
+{
+    margin: auto;
+}
+
+.p-clean .cart--author-info .body-avatar .avatar
+{
+    position: relative;
+}
+
+.p-clean .cart--author-info .body-avatar .avatar img
+{
+    width: auto;
+    max-width: 100%;
+    height: 110px;
+    max-height: 110px;
+
+    -webkit-border-radius: 5px;
+            border-radius: 5px;
+}
+
+.p-clean .cart--author-info .body-avatar .contacs
+{
+    display: block;
+
+    margin-top: 5px;
+}
+
+.p-clean .cart--author-info .body-avatar .contacs .body-description_phone
+{
+    display: block;
+}
+
+.p-clean .cart--author-info .body-description
+{
+    position: relative;
+}
+
+.p-clean .cart--author-info .body-description .name-block
+{
+    margin-bottom: 20px;
+}
+
+.p-clean .cart--author-info .body-description .big
+{
+    font-size: 2.5em;
+    line-height: 1em;
+}
+
+.p-clean .cart--author-info .body-description .bottom
+{
+    margin-bottom: 20px;
 }
 
 @media screen and (-webkit-min-device-pixel-ratio: 0)
