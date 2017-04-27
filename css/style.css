@@ -6266,6 +6266,33 @@ footer.main-footer .copyright
     margin: 25px 0 0;
 }
 
+.cart--ads-offer_d .body-avatar
+{
+    margin: 0;
+}
+
+.cart--ads-offer_d .body-avatar .avatar img
+{
+    width: 35px;
+    height: 35px;
+}
+
+.cart--ads-offer_d .body-avatar .name-block
+{
+    margin-left: 45px;
+}
+
+.cart--ads-offer_d .body-avatar .name-block a
+{
+    font-size: .9em;
+    line-height: 1.2em;
+}
+
+.cart--ads-offer_d .body_btns
+{
+    margin: 15px 0 0;
+}
+
 .panel
 {
     background: #fff;
@@ -7770,6 +7797,12 @@ footer.main-footer .copyright
 .slick-slider.slider--demand .slick-prev:before,
 .slick-slider.slider--demand .slick-next:before
 {
+    border-color: #262626;
+}
+
+.slick-slider.slider--demand .slick-prev:before:hover,
+.slick-slider.slider--demand .slick-next:before:hover
+{
     border-color: #000;
 }
 
@@ -8725,6 +8758,13 @@ fieldset[disabled] .p-main .select-header_btn-right.focus
 .p-rent .btn-all-requests
 {
     margin: 35px 0 0;
+
+    text-align: center;
+}
+
+.p-rent .btn-all-demandes
+{
+    margin: 25px 0 30px;
 
     text-align: center;
 }
