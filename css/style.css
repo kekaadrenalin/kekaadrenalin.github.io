@@ -7510,17 +7510,6 @@ footer.main-footer .copyright
     margin-bottom: 0;
 }
 
-.messages-body_content .message_item .bubble p.status
-{
-    position: absolute;
-    right: 30px;
-    bottom: 9px;
-
-    text-align: right;
-
-    color: #38b0be;
-}
-
 .messages-body_content .message_item .bubble:before
 {
     position: absolute;
@@ -7565,6 +7554,19 @@ footer.main-footer .copyright
     font-size: .9em;
 
     color: #a6a6a6;
+}
+
+.messages-body_content .message_item--to .bubble p.activity:before,
+.messages-body_content .message_item--to .bubble p.activity:after
+{
+    display: table;
+
+    content: ' ';
+}
+
+.messages-body_content .message_item--to .bubble p.activity:after
+{
+    clear: both;
 }
 
 .messages-body_content .message_item--to .bubble:before
@@ -8051,6 +8053,7 @@ p.page-search-description,
     margin-bottom: 0;
 }
 
+.nice-scroll-h,
 .nice-scroll
 {
     overflow-y: hidden;
