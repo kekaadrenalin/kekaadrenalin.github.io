@@ -5300,6 +5300,231 @@ table th[class*='col-']
     display: none;
 }
 
+.modal-open
+{
+    overflow: hidden;
+}
+
+.modal
+{
+    position: fixed;
+    z-index: 1050;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    display: none;
+    overflow: hidden;
+
+    outline: 0;
+
+    -webkit-overflow-scrolling: touch;
+}
+
+.modal.fade .modal-dialog
+{
+    -webkit-transition: -webkit-transform .3s ease-out;
+            transition:         transform .3s ease-out;
+    -webkit-transform: translate(0, -25%);
+        -ms-transform: translate(0, -25%);
+            transform: translate(0, -25%);
+}
+
+.modal.in .modal-dialog
+{
+    -webkit-transform: translate(0, 0);
+        -ms-transform: translate(0, 0);
+            transform: translate(0, 0);
+}
+
+.modal-open .modal
+{
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.modal-dialog
+{
+    position: relative;
+
+    width: auto;
+    margin: 10px;
+}
+
+.modal-content
+{
+    position: relative;
+
+    border: 1px solid #999;
+    border: 1px solid rgba(0, 0, 0, .2);
+    -webkit-border-radius: 6px;
+            border-radius: 6px;
+    outline: 0;
+    background-color: #fff;
+    -webkit-background-clip: padding-box;
+            background-clip: padding-box;
+    -webkit-box-shadow: 0 3px 9px rgba(0, 0, 0, .5);
+            box-shadow: 0 3px 9px rgba(0, 0, 0, .5);
+}
+
+.modal-backdrop
+{
+    position: fixed;
+    z-index: 1040;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    background-color: #000;
+}
+
+.modal-backdrop.fade
+{
+    opacity: 0;
+
+    filter: alpha(opacity=0);
+}
+
+.modal-backdrop.in
+{
+    opacity: .5;
+
+    filter: alpha(opacity=50);
+}
+
+.modal-header
+{
+    padding: 15px;
+
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.modal-header:before,
+.modal-header:after
+{
+    display: table;
+
+    content: ' ';
+}
+
+.modal-header:after
+{
+    clear: both;
+}
+
+.modal-header .close
+{
+    float: right;
+
+    width: 20px;
+    height: 20px;
+    margin: 0;
+
+    cursor: pointer;
+
+    color: #000;
+    border: 0;
+    background: 0 0;
+
+    -webkit-appearance: none;
+}
+
+.modal-header .close:before,
+.modal-header .close:after
+{
+    top: 9px;
+    left: -1px;
+
+    width: 22px;
+    height: 2px;
+
+    background-color: #356a80;
+}
+
+.modal-header .close:hover:before,
+.modal-header .close:hover:after,
+.modal-header .close:focus:before,
+.modal-header .close:focus:after
+{
+    background-color: #264c5c;
+}
+
+.modal-title
+{
+    line-height: 1.428571429;
+
+    margin: 0;
+}
+
+.modal-body
+{
+    position: relative;
+
+    padding: 15px;
+}
+
+.modal-footer
+{
+    padding: 15px;
+
+    text-align: right;
+
+    border-top: 1px solid #e5e5e5;
+}
+
+.modal-footer:before,
+.modal-footer:after
+{
+    display: table;
+
+    content: ' ';
+}
+
+.modal-footer:after
+{
+    clear: both;
+}
+
+.modal-footer .btn + .btn
+{
+    margin-bottom: 0;
+    margin-left: 5px;
+}
+
+.modal-footer .btn-group .btn + .btn
+{
+    margin-left: -1px;
+}
+
+.modal-footer .btn-block + .btn-block
+{
+    margin-left: 0;
+}
+
+.modal-scrollbar-measure
+{
+    position: absolute;
+    top: -9999px;
+
+    overflow: scroll;
+
+    width: 50px;
+    height: 50px;
+}
+
+.modal-msg .modal-content,
+.modal-msg .modal-header,
+.modal-msg .modal-body,
+.modal-msg .modal-footer
+{
+    padding: 0;
+
+    -webkit-border-radius: 0;
+            border-radius: 0;
+}
+
 /*=== компоненты ===*/
 
 .main-menu
@@ -7327,7 +7552,10 @@ footer.main-footer .copyright
 
 .messages-body_content .message_item--to .bubble
 {
-    margin-left: 307px;
+    position: relative;
+    right: 0;
+
+    margin-left: auto;
 
     background: #f1f5f8;
 }
@@ -7341,7 +7569,8 @@ footer.main-footer .copyright
 
 .messages-body_content .message_item--to .bubble:before
 {
-    right: -4px;
+    right: -19px;
+    bottom: 0;
 
     border-bottom: 10px solid #f1f5f8;
     border-left: 10px solid #f1f5f8;
@@ -9503,6 +9732,23 @@ fieldset[disabled] .p-main .select-header_btn-right.focus
         right: auto;
         left: 0;
     }
+
+    .modal-dialog
+    {
+        width: 600px;
+        margin: 64px auto;
+    }
+
+    .modal-content
+    {
+        -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, .5);
+                box-shadow: 0 5px 15px rgba(0, 0, 0, .5);
+    }
+
+    .modal-sm
+    {
+        width: 300px;
+    }
 }
 
 @media (min-width: 768px) and (max-width: 991px)
@@ -9825,6 +10071,11 @@ fieldset[disabled] .p-main .select-header_btn-right.focus
     .col-md-offset-12
     {
         margin-left: 100%;
+    }
+
+    .modal-lg
+    {
+        width: 900px;
     }
 }
 

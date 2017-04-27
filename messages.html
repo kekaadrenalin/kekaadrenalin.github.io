@@ -33,7 +33,7 @@
                                     <a href="#!" class="btn btn--user nav-btn"><img src="/img/users/maks.jpg"> Максим Б.</a>
                                 </div>
                                 <div class="nav nav--messages hidden-xs hidden-sm">
-                                    <button type="button" class="btn btn--messages nav-btn"></button>
+                                    <button type="button" class="btn btn--messages nav-btn" data-toggle="modal" data-target="#modal-all-messages"></button>
                                     <span class="badge"></span>
                                 </div>
                                 <div class="nav nav--notices hidden-xs hidden-sm">
@@ -168,8 +168,8 @@
                 <div class="row">
                     <div class="col-xs-12">
                         <ol class="breadcrumb">
-                            <li><a href="/main.html"><span>Главная<span></a></li>
-                            <li class="active"><span>Личный кабинет<span></li>
+                            <li><a href="/main.html"><span>Главная</span></a></li>
+                            <li class="active"><span>Личный кабинет</span></li>
                         </ol>
                     </div>
                 </div>
@@ -352,8 +352,149 @@
                 </div>
             </div>
         </section>
+
     </main>
 </div>
+
+<div class="modal modal-msg fade" id="modal-all-messages" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="messages">
+                    <div class="messages-nav panel">
+                        <ul class="list-dialog nice-scroll-h">
+                            <li class="list-dialog_item">
+                                <a href="#!" class="dialog-block">
+                                    <div class="avatar-block">
+                                        <img src="/img/users/maks.jpg" class="user-avatar">
+                                    </div>
+                                    <div class="desc-block">
+                                        <span>Павел Григорьян</span>
+                                    </div>
+                                </a>
+                                <span class="control" title="Удалить переписку">
+                                            <span class="close"></span>
+                                        </span>
+                                <span class="count" title="1 непрочитанное сообщение">1</span>
+                            </li>
+                            <li class="list-dialog_item active">
+                                <a href="#!" class="dialog-block">
+                                    <div class="avatar-block">
+                                        <img src="/img/users/maks.jpg" class="user-avatar">
+                                    </div>
+                                    <div class="desc-block">
+                                        <span>ООО «ГазЛогистик Сервис»</span>
+                                    </div>
+                                </a>
+                                <span class="control" title="Удалить переписку">
+                                            <span class="close"></span>
+                                        </span>
+                                <span class="count" title="1 непрочитанное сообщение">1</span>
+                            </li>
+                            <li class="list-dialog_item">
+                                <a href="#!" class="dialog-block">
+                                    <div class="avatar-block">
+                                        <img src="/img/users/maks.jpg" class="user-avatar">
+                                    </div>
+                                    <div class="desc-block">
+                                        <span>Сергей Верещагин</span>
+                                    </div>
+                                </a>
+                                <span class="control" title="Удалить переписку">
+                                            <span class="close"></span>
+                                        </span>
+                                <span class="count"></span>
+                            </li>
+                            <li class="list-dialog_item">
+                                <a href="#!" class="dialog-block">
+                                    <div class="avatar-block">
+                                        <img src="/img/users/maks.jpg" class="user-avatar">
+                                    </div>
+                                    <div class="desc-block">
+                                        <span>Жанна Анатольевна</span>
+                                    </div>
+                                </a>
+                                <span class="control" title="Удалить переписку">
+                                            <span class="close"></span>
+                                        </span>
+                                <span class="count"></span>
+                            </li>
+                            <li class="list-dialog_item">
+                                <a href="#!" class="dialog-block">
+                                    <div class="avatar-block">
+                                        <img src="/img/users/maks.jpg" class="user-avatar">
+                                    </div>
+                                    <div class="desc-block">
+                                        <span>АО «Стройтранс нефтегаз»</span>
+                                    </div>
+                                </a>
+                                <span class="control" title="Удалить переписку">
+                                            <span class="close"></span>
+                                        </span>
+                                <span class="count" title="10 непрочитанных сообщение">10</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="messages-body panel">
+                        <div class="messages-body_head">
+                            <div class="dialog-block">
+                                <div class="avatar-block">
+                                    <img src="/img/users/maks.jpg" class="user-avatar">
+                                </div>
+                                <div class="desc-block">
+                                    <span>ООО «ГазЛогистикСервис»</span>
+                                </div>
+                            </div>
+                            <p class="activity">Был в сети 21.05.2017 в 13:33</p>
+                        </div>
+                        <ul class="messages-body_content nice-scroll-h">
+                            <li class="message_item message_item--from">
+                                <div class="bubble">
+                                    <p>Хотела гереговорить по поводу Вашего последнего предложения об оказании услуг по охране складских объектов.<br>Какова стоимость и сколько людей трудятся у Вас в штате?</p>
+                                    <p class="activity">21.05.2017 в 13:33</p>
+                                </div>
+                            </li>
+                            <li class="message_item message_item--to">
+                                <div class="bubble">
+                                    <p>Лучший опыт по организации скалдской логистики я приобрел именно на Маркетет складской логистики</p>
+                                    <p class="activity">22.05.2017 в 12:08</p>
+                                    <p class="status">Прочитано</p>
+                                </div>
+                            </li>
+                            <li class="message_item message_item--to">
+                                <div class="bubble">
+                                    <p>Вы прочитали последнее сообщение?</p>
+                                    <p class="activity">22.05.2017 в 12:10</p>
+                                    <p class="status">Доставлено</p>
+                                </div>
+                            </li>
+                            <li class="message_item message_item--from">
+                                <div class="bubble">
+                                    <p>Хотела гереговорить по поводу Вашего последнего предложения об оказании услуг по охране складских объектов.<br>Какова стоимость и сколько людей трудятся у Вас в штате?</p>
+                                    <p class="activity">21.05.2017 в 13:33</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="panel messages-form">
+                    <form class="form">
+                        <div class="col-xs-10">
+                            <input type="text" class="form-control" placeholder="Начните писать сообщение...">
+                        </div>
+                        <div class="col-xs-2">
+                            <button type="submit" class="btn btn--danger btn--block">Отправить</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>
+                <button type="button" class="btn btn-primary">Сохранить изменения</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
 
 <footer class="main-footer">
     <div class="container">
