@@ -1,4 +1,6 @@
 (function($){
+    'use strict';
+
     // переключение tab-ов для menu
     // $('#menu a').click(function(e){
         // e.preventDefault();
@@ -31,7 +33,7 @@
 
             var circleLayout = ymaps.templateLayoutFactory.createClass('<div class="map-placemark_layout_container"><div class="map-circle_layout">1</div></div>');
 
-            myPlacemark = new ymaps.Placemark([55.76, 37.64], {
+            var myPlacemark = new ymaps.Placemark([55.76, 37.64], {
                 hintContent: '1',
                 balloonContent: 'Столица России'
             }, {

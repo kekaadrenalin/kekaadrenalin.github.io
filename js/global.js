@@ -459,18 +459,20 @@ d.slice(e-c+1,e+c+2).addClass("slick-active").attr("aria-hidden","false")),0===a
 }(jQuery);
 
 (function($){
+    'use strict';
+
     // меню
     $('.main-menu .js-menu-activate').click(function(e){
         e.preventDefault();
         $('.main-menu .js-menu-active').toggleClass('hide');
-        
+
         $(document).one('keyup', function(e){
             if (e.keyCode == 27) {
                 $('.main-menu .js-menu-active').toggleClass('hide');
             }
         });
     });
-    
+
     // -- поле ввода input[type="file"] -- //
     // имитация нажатия
     $('input[type="text"][readonly].clip').click(function(){
@@ -480,23 +482,23 @@ d.slice(e-c+1,e+c+2).addClass("slick-active").attr("aria-hidden","false")),0===a
     $('input[type="file"]').change(function(){
         getNameFile($(this));
     });
-    
+
     // функция по отоборажению названия выбранного файла в input[type="file"]
     function getNameFile($fileInput) {
         if ($fileInput === undefined || $fileInput == null || $fileInput.is(':not(input:file)')) return;
-        
+
         var $files = $fileInput.prop('files'),
             _name = [];
-        
+
         for (var i = 0; i < $files.length; i++) {
             (function (file) {
                 _name[_name.length] = file.name;
             })($files[i]);
         }
-        
+
         $fileInput.prev('input[type="text"].clip').val(_name.join('; '));
     }
-    
+
     // делаем прокрутки где нужно
     $('.nice-scroll').niceScroll({
         cursorborderradius: '1px',
@@ -509,18 +511,19 @@ d.slice(e-c+1,e+c+2).addClass("slick-active").attr("aria-hidden","false")),0===a
         horizrailenabled: false,
         cursorminheight: 45,
     });
-    
+
     // перемотка всех scroll-box вниз
     $('.js-nice-scroll--bottom').each(function(){
         $(this).scrollTop(this.scrollHeight);
     });
-    
+
     //-- Start yandex-map --//
     var bgSearchMap;
     if ($('#map-bg-main').length > 0) {
         ymaps.ready(initYaMap);
-        
-        function initYaMap() { 
+
+        //noinspection JSAnnotator
+        function initYaMap() {
             bgSearchMap = new ymaps.Map('map-bg-main', {
                 center: [55.76, 37.64],
                 zoom: 7,
@@ -554,8 +557,8 @@ d.slice(e-c+1,e+c+2).addClass("slick-active").attr("aria-hidden","false")),0===a
                 '</div></div></div></div></div></div>'
             );
             var circleLayout = ymaps.templateLayoutFactory.createClass('<div class="map-placemark_layout_container"><div class="map-circle_layout">1</div></div>');
-            
-            myPlacemark = new ymaps.Placemark([54.08, 37.76], {
+
+            var myPlacemark = new ymaps.Placemark([54.08, 37.76], {
                 hintContent: 'Какое-то предложение',
             }, {
                 balloonContentLayout: MyBalloonContentLayoutClass,
@@ -577,6 +580,7 @@ d.slice(e-c+1,e+c+2).addClass("slick-active").attr("aria-hidden","false")),0===a
         var myMap;
         ymaps.ready(initYaMap);
 
+        //noinspection JSAnnotator
         function initYaMap() {
             myMap = new ymaps.Map('map-in-rent-offer', {
                 center: [55.76, 37.64],
@@ -586,7 +590,7 @@ d.slice(e-c+1,e+c+2).addClass("slick-active").attr("aria-hidden","false")),0===a
 
             var circleLayout = ymaps.templateLayoutFactory.createClass('<div class="map-placemark_layout_container"><div class="map-circle_layout">1</div></div>');
 
-            myPlacemark = new ymaps.Placemark([55.76, 37.64], {
+            var myPlacemark = new ymaps.Placemark([55.76, 37.64], {
                 hintContent: '1',
                 balloonContent: 'Столица России'
             }, {
@@ -607,6 +611,7 @@ d.slice(e-c+1,e+c+2).addClass("slick-active").attr("aria-hidden","false")),0===a
         var myMap;
         ymaps.ready(initYaMap);
 
+        //noinspection JSAnnotator
         function initYaMap() {
             myMap = new ymaps.Map('map-in-search--full', {
                 center: [55.76, 37.64],
@@ -616,7 +621,7 @@ d.slice(e-c+1,e+c+2).addClass("slick-active").attr("aria-hidden","false")),0===a
 
             var circleLayout = ymaps.templateLayoutFactory.createClass('<div class="map-placemark_layout_container"><div class="map-circle_layout">1</div></div>');
 
-            myPlacemark = new ymaps.Placemark([55.76, 37.64], {
+            var myPlacemark = new ymaps.Placemark([55.76, 37.64], {
                 hintContent: '1',
                 balloonContent: 'Столица России'
             }, {
@@ -635,7 +640,7 @@ d.slice(e-c+1,e+c+2).addClass("slick-active").attr("aria-hidden","false")),0===a
     // активируем скрыть/развернуть блок search
     $('.js-btn-roll-search').click(function(e) {
         e.preventDefault();
-        
+
         var $this = $(this),
             $resultBlock = $('.block-search-result'),
             $box = $('.js-box-roll-search'),
@@ -653,5 +658,23 @@ d.slice(e-c+1,e+c+2).addClass("slick-active").attr("aria-hidden","false")),0===a
             }
         });
     });
-    
+
+    // слайдер спроса
+    $('.slider--demand').slick({
+        slide: '.slide_item',
+        slidesToShow: 2,
+        slidesToScroll: 2,
+        arrows: true,
+        focusOnSelect: true,
+        responsive: [
+            {
+                breakpoint: 1200,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            }
+        ]
+    });
+
 })(jQuery);

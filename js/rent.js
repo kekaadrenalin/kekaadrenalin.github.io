@@ -1,4 +1,6 @@
 (function($){
+    'use strict';
+
     // слайдер фото
     $('.slider-main').slick({
         slide: '.slide-item',

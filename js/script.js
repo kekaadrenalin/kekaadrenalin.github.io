@@ -1,4 +1,6 @@
 (function($){
+    'use strict';
+
     // переключение tab-ов для how-block
     $('#how-block--tabs a').click(function(e){
         e.preventDefault();

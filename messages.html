@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Редактирование личных данных</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&amp;subset=cyrillic,cyrillic-ext">
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+</head>
+<body>
+<div class="warp">
+    <header>
+        <nav class="main-menu">
+            <div class="main-menu__wrap">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <div class="js-menu-active">
+                                <a href="/main.html" class="brand center">Маркет Складской<br>Логистики</a>
+                                <div class="nav nav--menu">
+                                    <button type="button" class="btn btn--menu nav-btn js-menu-activate"></button>
+                                </div>
+                                <div class="nav nav--geo hidden-xs hidden-sm">
+                                    <button type="button" class="btn btn--geo nav-btn arrow arrow--up">Петропавловск</button>
+                                </div>
+                                <div class="nav nav--user hidden-xs">
+                                    <a href="#!" class="btn btn--user nav-btn"><img src="/img/users/maks.jpg"> Максим Б.</a>
+                                </div>
+                                <div class="nav nav--messages hidden-xs hidden-sm">
+                                    <button type="button" class="btn btn--messages nav-btn"></button>
+                                    <span class="badge"></span>
+                                </div>
+                                <div class="nav nav--notices hidden-xs hidden-sm">
+                                    <button type="button" class="btn btn--notices nav-btn"></button>
+                                    <span class="badge"></span>
+                                    <div class="popup-notice fade">
+                                        <p class="popup-notice_title">Уведомления</p>
+                                        <div class="notices">
+                                            <div class="notice-item">
+                                                <p class="small">28.02.2017 в 12:30</p>
+                                                <p class="small">Новое предложение по потребности № 399</p>
+                                                <p class="text-bold subject"><a href="#!">Ищу погрузчик для склада</a></p>
+                                                <p class="small">в категории <a href="#!" class="link--underline">Спецтехника</a></p>
+                                            </div>
+                                            <div class="notice-item">
+                                                <p class="small">28.02.2017 в 12:30</p>
+                                                <p class="small">Новое предложение по потребности № 322</p>
+                                                <p class="text-bold subject"><a href="#!">360м2, Чкаловск</a></p>
+                                                <p class="small">в категории <a href="#!" class="link--underline">Аренда склада</a></p>
+                                            </div>
+                                            <div class="notice-item">
+                                                <p class="small">28.02.2017 в 12:30</p>
+                                                <p class="small">Новое предложение по потребности № 399</p>
+                                                <p class="text-bold subject"><a href="#!">Ищу погрузчик для склада</a></p>
+                                                <p class="small">в категории <a href="#!" class="link--underline">Спецтехника</a></p>
+                                            </div>
+                                        </div>
+                                        <p class="popup-notice_footer"><a href="#!">Отметить все как прочитанные</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="hide js-menu-active">
+                                <a href="/main.html" class="brand left">Маркет Складской<br>Логистики</a>
+                                <div class="nav nav--close">
+                                    <a href="#!" class="btn btn--close nav-btn js-menu-activate"><span class="close"></span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="main-menu__body hide js-menu-active">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <div class="visible-xs">
+                                    <p>Личный кабинет</p>
+                                    <ul>
+                                        <li><a href="#!">Создать что-то</a></li>
+                                        <li><a href="#!">Уведомления</a></li>
+                                        <li><a href="#!">Сообщения</a></li>
+                                        <li><a href="#!">Выйти</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-sm-4 col-sm-4 col-xs-6">
+                                <p>Аренда</p>
+                                <ul>
+                                    <li><a href="#!">Предложения</a></li>
+                                    <li><a href="#!">Запросы</a></li>
+                                    <li><a href="#!">Категория 3</a></li>
+                                    <li><a href="#!">Категория 4</a></li>
+                                </ul>
+                                <p>Услуги и товары</p>
+                                <ul>
+                                    <li><a href="#!">Предложения</a></li>
+                                    <li><a href="#!">Запросы</a></li>
+                                    <li><a href="#!">Категория 3</a></li>
+                                    <li><a href="#!">Категория 4</a></li>
+                                </ul>
+                                <p>Хозяйственные нужды</p>
+                                <ul>
+                                    <li><a href="#!">Категория 1</a></li>
+                                    <li><a href="#!">Категория 2</a></li>
+                                    <li><a href="#!">Категория 3</a></li>
+                                    <li><a href="#!">Категория 4</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-md-5 col-sm-4 col-xs-6">
+                                <p>Спецтехника и оборудование</p>
+                                <ul>
+                                    <li><a href="#!">Предложения</a></li>
+                                    <li><a href="#!">Запросы</a></li>
+                                    <li><a href="#!">Категория 3</a></li>
+                                    <li><a href="#!">Категория 4</a></li>
+                                </ul>
+                                <p>Безопасность</p>
+                                <ul>
+                                    <li><a href="#!">Предложения</a></li>
+                                    <li><a href="#!">Запросы</a></li>
+                                    <li><a href="#!">Категория 3</a></li>
+                                    <li><a href="#!">Категория 4</a></li>
+                                </ul>
+                                <p>Персонал</p>
+                                <ul>
+                                    <li><a href="#!">Вакансии</a></li>
+                                    <li><a href="#!">Резюме</a></li>
+                                    <li><a href="#!">Категория 3</a></li>
+                                    <li><a href="#!">Категория 4</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-md-3 col-sm-4 col-xs-12">
+                                <div class="row">
+                                    <div class="col-md-12 col-sm-12 col-xs-6">
+                                        <p>О сервисе</p>
+                                        <ul>
+                                            <li><a href="#!">Частые вопросы</a></li>
+                                            <li><a href="#!">О сервисе</a></li>
+                                            <li><a href="#!">Поддержка</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-md-12 col-sm-12 col-xs-6">
+                                        <p>Информация</p>
+                                        <ul>
+                                            <li><a href="#!">Категория 1</a></li>
+                                            <li><a href="#!">Категория 2</a></li>
+                                            <li><a href="#!">Категория 3</a></li>
+                                            <li><a href="#!">Категория 4</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="p-account">
+        <section class="bg-s bg-s--none p-head">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <ol class="breadcrumb">
+                            <li><a href="/main.html"><span>Главная<span></a></li>
+                            <li class="active"><span>Личный кабинет<span></li>
+                        </ol>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1 class="page-name page-name--account">Личный кабинет</h1>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-s bg-s--grey body-block">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-3 col-md-3">
+                        <div class="dropdown">
+                            <div class="btn-group">
+                                <button type="button" class="btn btn--success btn--md btn--block arrow arrow--up arrow--small dropdown-toggle" data-toggle="dropdown">Создать</button>
+                                <ul class="dropdown-menu" role="menu">
+                                    <li><a href="#">Создать запрос (услуги)</a></li>
+                                    <li><a href="#">Создать предложение (услуги)</a></li>
+                                    <li><a href="#">Создать запрос (аренда)</a></li>
+                                    <li><a href="#">Создать предложение (аренда)</a></li>
+                                    <li><a href="#">Создать резюме</a></li>
+                                    <li><a href="#">Создать вакансию</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="panel panel-menu">
+                            <ul class="panel-menu-list">
+                                <li><a href="#!" class="link--black">Обзор лучших предложений</a></li>
+                                <li><a href="#!" class="link--black">Обзор лучших потребностей</a></li>
+                            </ul>
+                        </div>
+                        <div class="panel panel-menu panel-menu--main">
+                            <ul class="panel-menu-list">
+                                <li><a href="#!" class="link--black">Мои предложения</a></li>
+                                <li><a href="#!" class="link--black">Мои потребности</a></li>
+                                <li><a href="#!" class="link--black">Мой персонал</a></li>
+                                <li class="active"><a href="#!" class="link--black">Сообщения</a></li>
+                                <li><a href="#!" class="link--black">Уведомления</a></li>
+                                <li><a href="#!" class="link--black">Настройки</a></li>
+                            </ul>
+                        </div>
+                        <div class="map">
+                            <div class="map-warp">
+                                <div class="map-body" id="map-in-left-menu"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-9 col-md-9">
+                        <div class="messages">
+                            <div class="messages-nav panel">
+                                <ul class="list-dialog nice-scroll">
+                                    <li class="list-dialog_item">
+                                        <a href="#!" class="dialog-block">
+                                            <div class="avatar-block">
+                                                <img src="/img/users/maks.jpg" class="user-avatar">
+                                            </div>
+                                            <div class="desc-block">
+                                                <span>Павел Григорьян</span>
+                                            </div>
+                                        </a>
+                                        <span class="control" title="Удалить переписку">
+                                            <span class="close"></span>
+                                        </span>
+                                        <span class="count" title="1 непрочитанное сообщение">1</span>
+                                    </li>
+                                    <li class="list-dialog_item active">
+                                        <a href="#!" class="dialog-block">
+                                            <div class="avatar-block">
+                                                <img src="/img/users/maks.jpg" class="user-avatar">
+                                            </div>
+                                            <div class="desc-block">
+                                                <span>ООО «ГазЛогистик Сервис»</span>
+                                            </div>
+                                        </a>
+                                        <span class="control" title="Удалить переписку">
+                                            <span class="close"></span>
+                                        </span>
+                                        <span class="count" title="1 непрочитанное сообщение">1</span>
+                                    </li>
+                                    <li class="list-dialog_item">
+                                        <a href="#!" class="dialog-block">
+                                            <div class="avatar-block">
+                                                <img src="/img/users/maks.jpg" class="user-avatar">
+                                            </div>
+                                            <div class="desc-block">
+                                                <span>Сергей Верещагин</span>
+                                            </div>
+                                        </a>
+                                        <span class="control" title="Удалить переписку">
+                                            <span class="close"></span>
+                                        </span>
+                                        <span class="count"></span>
+                                    </li>
+                                    <li class="list-dialog_item">
+                                        <a href="#!" class="dialog-block">
+                                            <div class="avatar-block">
+                                                <img src="/img/users/maks.jpg" class="user-avatar">
+                                            </div>
+                                            <div class="desc-block">
+                                                <span>Жанна Анатольевна</span>
+                                            </div>
+                                        </a>
+                                        <span class="control" title="Удалить переписку">
+                                            <span class="close"></span>
+                                        </span>
+                                        <span class="count"></span>
+                                    </li>
+                                    <li class="list-dialog_item">
+                                        <a href="#!" class="dialog-block">
+                                            <div class="avatar-block">
+                                                <img src="/img/users/maks.jpg" class="user-avatar">
+                                            </div>
+                                            <div class="desc-block">
+                                                <span>АО «Стройтранс нефтегаз»</span>
+                                            </div>
+                                        </a>
+                                        <span class="control" title="Удалить переписку">
+                                            <span class="close"></span>
+                                        </span>
+                                        <span class="count" title="10 непрочитанных сообщение">10</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="messages-body panel">
+                                <div class="messages-body_head">
+                                    <div class="dialog-block">
+                                        <div class="avatar-block">
+                                            <img src="/img/users/maks.jpg" class="user-avatar">
+                                        </div>
+                                        <div class="desc-block">
+                                            <span>ООО «ГазЛогистикСервис»</span>
+                                        </div>
+                                    </div>
+                                    <p class="activity">Был в сети 21.05.2017 в 13:33</p>
+                                </div>
+                                <ul class="messages-body_content nice-scroll">
+                                    <li class="message_item message_item--from">
+                                        <div class="bubble">
+                                            <p>Хотела гереговорить по поводу Вашего последнего предложения об оказании услуг по охране складских объектов.<br>Какова стоимость и сколько людей трудятся у Вас в штате?</p>
+                                            <p class="activity">21.05.2017 в 13:33</p>
+                                        </div>
+                                    </li>
+                                    <li class="message_item message_item--to">
+                                        <div class="bubble">
+                                            <p>Лучший опыт по организации скалдской логистики я приобрел именно на Маркетет складской логистики</p>
+                                            <p class="activity">22.05.2017 в 12:08</p>
+                                            <p class="status">Прочитано</p>
+                                        </div>
+                                    </li>
+                                    <li class="message_item message_item--to">
+                                        <div class="bubble">
+                                            <p>Вы прочитали последнее сообщение?</p>
+                                            <p class="activity">22.05.2017 в 12:10</p>
+                                            <p class="status">Доставлено</p>
+                                        </div>
+                                    </li>
+                                    <li class="message_item message_item--from">
+                                        <div class="bubble">
+                                            <p>Хотела гереговорить по поводу Вашего последнего предложения об оказании услуг по охране складских объектов.<br>Какова стоимость и сколько людей трудятся у Вас в штате?</p>
+                                            <p class="activity">21.05.2017 в 13:33</p>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="panel messages-form">
+                            <form class="form">
+                                <div class="col-xs-10">
+                                    <input type="text" class="form-control" placeholder="Начните писать сообщение...">
+                                </div>
+                                <div class="col-xs-2">
+                                    <button type="submit" class="btn btn--danger btn--block">Отправить</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+</div>
+
+<footer class="main-footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-6 col-sm-5 col-md-3">
+                <h4>О компании</h4>
+                <p><a href="#!" class="link--light">О нас</a></p>
+                <p><a href="#!" class="link--light">FAQ</a></p>
+                <p><a href="#!" class="link--light">Карьера</a></p>
+                <p><a href="#!" class="link--light">Пользовательское соглашение</a></p>
+                <p><a href="#!" class="link--light">Политика конфиденциальности</a></p>
+                <p><a href="#!" class="link--light">Контакт / Поддержка</a></p>
+            </div>
+            <div class="col-xs-6 col-sm-4 col-md-3">
+                <h4>Дополнительные услуги</h4>
+                <p><a href="#!" class="link--light">Услуги для компаний</a></p>
+                <p><a href="#!" class="link--light">Лучшие предложения</a></p>
+                <p><a href="#!" class="link--light">Лучшие потребности</a></p>
+            </div>
+            <div class="hidden-xs col-sm-3 col-md-2">
+                <h4>Мы в соцсетях</h4>
+                <ul class="share-box list-inline">
+                    <li><a class="link--light" href="#!" title="Мы в Twitter" target="_blank"><span class="icon icon--twitter-white icon--twitter-white-size"></span></a></li>
+                    <li><a class="link--light" href="#!" title="Мы в VKontakte" target="_blank"><span class="icon icon--vk-white icon--vk-white-size"></span></a></li>
+                    <li><a class="link--light" href="#!" title="Мы в Facebook" target="_blank"><span class="icon icon--fb-white icon--fb-white-size"></span></a></li>
+                    <li><a class="link--light" href="#!" title="Мы в Instagram" target="_blank"><span class="icon icon--instagram-white icon--instagram-white-size"></span></a></li>
+                </ul>
+            </div>
+            <div class="hidden-xs hidden-sm col-md-4">
+                <h4>Подписка на рассылку</h4>
+                <form class="form form--subscribe-footer">
+                    <input type="email" class="input-subscribe" placeholder="E-mail">
+                    <button class="btn btn--primary" type="submit">Отправить</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <div class="container">
+            <div class="text-center">© Маркет Складской Логистики, 2017</div>
+        </div>
+    </div>
+</footer>
+
+<script src="/js/global.js"></script>
+<script src="/js/account.js"></script>
+</body>
+</html>
