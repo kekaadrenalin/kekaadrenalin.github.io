@@ -2188,7 +2188,7 @@ ol ol
 label,
 .p-account .body-block form.form .label-pass-from-sms
 {
-    font-weight: bold;
+    font-weight: 600;
 
     display: inline-block;
 
@@ -3209,7 +3209,7 @@ select[multiple].input-md
 .btn
 {
     font-size: 14px;
-    font-weight: normal;
+    font-weight: 600;
     line-height: 1.428571429;
 
     display: inline-block;
@@ -5358,8 +5358,8 @@ table th[class*='col-']
 
     border: 1px solid #999;
     border: 1px solid rgba(0, 0, 0, .2);
-    -webkit-border-radius: 6px;
-            border-radius: 6px;
+    -webkit-border-radius: 0;
+            border-radius: 0;
     outline: 0;
     background-color: #fff;
     -webkit-background-clip: padding-box;
@@ -5396,9 +5396,9 @@ table th[class*='col-']
 
 .modal-header
 {
-    padding: 15px;
-
-    border-bottom: 1px solid #e5e5e5;
+    padding-top: 15px;
+    padding-right: 15px;
+    padding-left: 15px;
 }
 
 .modal-header:before,
@@ -5462,7 +5462,44 @@ table th[class*='col-']
 {
     position: relative;
 
-    padding: 15px;
+    padding-top: 5px;
+    padding-right: 30px;
+    padding-bottom: 15px;
+    padding-left: 30px;
+}
+
+.modal-body .title
+{
+    font-size: 22px;
+    font-weight: bold;
+
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.modal-body .title--small
+{
+    font-size: 21px;
+}
+
+.modal-body .title--big
+{
+    font-size: 24px;
+}
+
+.modal-body .subtitle
+{
+    font-size: 16px;
+    font-weight: 600;
+
+    text-align: center;
+}
+
+.modal-body .preload
+{
+    margin-top: 18px;
+
+    text-align: center;
 }
 
 .modal-footer
