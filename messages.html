@@ -608,13 +608,16 @@
                 </div>
                 <div class="panel messages-form">
                     <form class="form">
-                        <div class="col-xs-10">
+                        <div class="col-xs-9">
                             <input type="text" class="form-control" placeholder="Начните писать сообщение...">
                         </div>
-                        <div class="col-xs-2">
+                        <div class="col-xs-3">
                             <button type="submit" class="btn btn--danger btn--block">Отправить</button>
                         </div>
                     </form>
+                    <div class="footer_btn">
+                        <a href="/account-messages.html" class="btn btn--success">Перейти ко всем сообщениям</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -666,5 +669,28 @@
 
 <script src="/js/global.js"></script>
 <script src="/js/personal.js"></script>
+<script>
+    (function($){
+        $('#modal-all-messages')
+            .on('shown.bs.modal', function() {
+                setTimeout(function() {
+                    $('.nice-scroll-h').niceScroll({
+                        cursorborderradius: '1px',
+                        cursorwidth: '5px',
+                        cursorcolor: '#d4e0e9',
+                        background: '#ffffff',
+                        cursorborder: 'none',
+                        bouncescroll: true,
+                        cursoropacitymin: 0,
+                        horizrailenabled: false,
+                        cursorminheight: 45,
+                    });
+                }, 450);
+            })
+            .on('hide.bs.modal', function() {
+                $('.nice-scroll-h').getNiceScroll().remove();
+            });
+    })(jQuery);
+</script>
 </body>
 </html>
