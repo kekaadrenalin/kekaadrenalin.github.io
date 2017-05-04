@@ -6901,6 +6901,11 @@ footer.main-footer .copyright
             box-shadow: 2px 2px 3px 0 rgba(0, 0, 0, .1), 2px 2px 4px -4px rgba(0, 0, 0, .4);
 }
 
+.fixed-table-container .bg-white tbody tr
+{
+    background: #fff;
+}
+
 .fixed-table-container tbody td
 {
     cursor: pointer;
